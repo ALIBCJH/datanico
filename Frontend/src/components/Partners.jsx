@@ -39,7 +39,7 @@ const Partners = () => {
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-16 object-contain"
+                className="w-32 h-32 object-contain"
               />
             </div>
           ))}

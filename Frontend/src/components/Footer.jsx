@@ -2,53 +2,53 @@ import { FaFacebookF, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 text-black py-16">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        {/* Brand Name */}
-        <h3 className="text-3xl md:text-4xl font-bold mb-2 tracking-tight text-gray-900">
-          Datani Insurance Agency
-        </h3>
-        <p className="text-orange-600 text-lg font-medium mb-8">
-          Service that Shields – Trusted. Personal. Kenyan.
-        </p>
+    <footer
+      className="bg-white border-t border-gray-200 text-black py-16"
+      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+    >
+      <div className="max-w-6xl mx-auto px-6 text-center space-y-10">
+        {/* Brand & Motto */}
+        <div>
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+            Datani Insurance Agency
+          </h3>
+          <p className="text-orange-600 text-xl md:text-2xl font-medium mt-2">
+            Service that Shields – Trusted. Personal. Kenyan.
+          </p>
+        </div>
 
-        {/* Contact Call to Action */}
-        <h4 className="text-xl md:text-2xl font-semibold mb-3 tracking-tight">
-          Get in Touch
-        </h4>
-        <p className="text-gray-600 text-base mb-8 max-w-xl mx-auto">
-          Have a question or need a quote? Reach out — we’re here to help you
-          protect what matters most.
-        </p>
+        {/* Social Icons in Cards */}
+        <div className="flex justify-center gap-8">
+          <div className="p-4 rounded-lg border border-gray-200 hover:shadow-lg hover:shadow-orange-200 transition duration-300">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-orange-700 hover:text-orange-600 transition"
+            >
+              <FaFacebookF size={28} />
+            </a>
+          </div>
 
-        {/* Contact Icons */}
-        <div className="flex justify-center gap-10 mb-10">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="hover:text-orange-600 transition duration-300"
-          >
-            <FaFacebookF size={24} />
-          </a>
-
-          <a
-            href="mailto:contact@dataninsure.com"
-            aria-label="Email"
-            className="hover:text-grey transition duration-300"
-          >
-            <FaEnvelope size={24} />
-          </a>
+          <div className="p-4 rounded-lg border border-gray-200 hover:shadow-lg hover:shadow-orange-200 transition duration-300">
+            <a
+              href="info@datani.co.ke"
+              aria-label="Email"
+              className="text-orange-700 hover:text-orange-600 transition"
+            >
+              <FaEnvelope size={28} />
+            </a>
+          </div>
         </div>
 
         {/* Divider */}
-        <hr className="border-gray-300 w-4/5 mx-auto mb-6" />
+        <hr className="border-gray-300 w-4/5 mx-auto" />
 
-        {/* Footer bottom */}
-        <p className="text-sm text-gray-500">
+        {/* Copyright */}
+        <p className="text-base md:text-lg text-gray-500">
           © {new Date().getFullYear()}{" "}
-          <span className="font-semibold text-black">
+          <span className="font-light text-grey">
             Datani Insurance Agency
           </span>
           . All rights reserved.
