@@ -27,7 +27,7 @@ const RequirementClaim = () => {
       className="min-h-screen bg-white px-6 pt-32 pb-20 max-w-6xl mx-auto"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
-      <h1 className="text-5xl font-bold text-black mb-6 text-center">
+      <h1 className="text-5xl font-light text-black mb-6 text-center">
         Claims Process
       </h1>
       <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
@@ -42,7 +42,7 @@ const RequirementClaim = () => {
             key={idx}
             className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition duration-200 hover:shadow-md "
           >
-            <h2 className="text-2xl font-semibold text-black mb-4">{title}</h2>
+            <h2 className="text-2xl font-light text-black mb-4">{title}</h2>
             <p className="text-gray-700 whitespace-pre-line text-base leading-relaxed">
               {content}
             </p>
@@ -57,7 +57,7 @@ const RequirementClaim = () => {
             <Phone size={28} />
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-black mb-1">
+            <h3 className="text-xl font-light text-black mb-1">
               Call Our Hotline
             </h3>
             <p className="text-gray-700 text-lg">0714 046604</p>
@@ -69,7 +69,7 @@ const RequirementClaim = () => {
             <Mail size={28} />
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-black mb-1">
+            <h3 className="text-xl font-light text-black mb-1">
               Email Our Team
             </h3>
             <p className="text-gray-700 text-lg">info@datani.co.ke</p>
@@ -77,7 +77,6 @@ const RequirementClaim = () => {
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div className="flex justify-center gap-4 mt-16 flex-wrap">
         <Link to="/faqs">
           <button className="bg-[#FF5722]  text-white text-lg px-6 py-3 rounded-xl font-semibold transition">

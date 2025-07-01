@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 import { navLinks } from "../constants";
 import Datanico from "../assets/tech/datanico.png";
 import menuIcon from "../assets/menu.svg";
@@ -9,9 +10,8 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 z-30 w-full bg-white py-3 px-6 sm:px-10">
+    <nav className="fixed top-0 z-30 w-full bg-white py-3 px-6 sm:px-10 border-b border-black shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
         <Link
           to="/"
           onClick={() => {
@@ -22,29 +22,36 @@ const Navbar = () => {
           <img
             src={Datanico}
             alt="Datani Logo"
-            className="w-60 h-auto max-h-30 object-contain"
+            className="w-72 h-auto max-h-32 object-contain"
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <ul className="hidden sm:flex gap-8 items-center text-black font-medium">
+        <div className="hidden sm:flex gap-8 items-center text-black font-light">
           {navLinks.map((link) => (
-            <li key={link.id}>
-              <Link
-                to={link.path}
-                className={`px-3 py-1 rounded-md transition duration-200 ${
-                  location.pathname === link.path
-                    ? "text-white underline underline-offset-4 bg-[#333333]"
-                    : "hover:text-white hover:bg-[#333333]"
-                }`}
-              >
-                {link.title}
-              </Link>
-            </li>
+            <Link
+              key={link.id}
+              to={link.path}
+              className={`px-4 py-2 rounded-md transition duration-200 text-xl ${
+                location.pathname === link.path
+                  ? "text-white underline underline-offset-4 bg-[#333333]"
+                  : "hover:text-white hover:bg-[#333333]"
+              }`}
+            >
+              {link.title}
+            </Link>
           ))}
-        </ul>
 
-        {/* Mobile Menu Icon */}
+          <a
+            href="https://wa.me/254714046604"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#1EBE5D] text-white px-5 py-3 rounded-md text-xl font-semibold"
+          >
+            <FaWhatsapp className="text-2xl" />
+            WhatsApp Us
+          </a>
+        </div>
+
         <div className="sm:hidden flex items-center">
           <button
             onClick={() => setToggle(!toggle)}
@@ -84,7 +91,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <ul className="flex flex-col gap-5 px-6 pt-2 text-[#e0e0e0] text-[16px]">
+        <ul className="flex flex-col gap-5 px-6 pt-2 text-[#e0e0e0] text-lg">
           {navLinks.map((link) => (
             <li key={link.id}>
               <Link
@@ -100,6 +107,19 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+
+          {/* WhatsApp Button (Mobile) */}
+          <li>
+            <a
+              href="https://wa.me/254714046604"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-[#1EBE5D] text-white px-5 py-3 rounded-md text-lg font-semibold"
+            >
+              <FaWhatsapp className="text-2xl" />
+              WhatsApp Us
+            </a>
+          </li>
         </ul>
       </div>
 

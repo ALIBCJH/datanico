@@ -9,7 +9,11 @@ const ClaimPage = () => {
   };
 
   return (
-    <section id="claim-form" className="bg-white py-16 px-4">
+    <section
+      id="claim-form"
+      className="bg-white pt-36 pb-20 px-4"
+      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+    >
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-extrabold text-orange-500">
@@ -101,7 +105,7 @@ const ClaimPage = () => {
 
           <button
             type="submit"
-            className="w-full bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 rounded-md transition duration-200 text-lg"
+            className="w-full bg-[#FF5722] hover:bg-orange-800 text-white font-bold py-3 rounded-md transition duration-200 text-lg"
           >
             Submit Claim
           </button>

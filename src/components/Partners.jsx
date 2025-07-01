@@ -26,7 +26,7 @@ const Partners = () => {
   return (
     <section className="py-16 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-black mb-12 text-center">
+        <h2 className="text-4xl font-light text-black mb-12 text-center">
           Our Insurance Partners
         </h2>
 

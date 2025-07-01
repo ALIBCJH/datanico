@@ -7,7 +7,6 @@ import {
   Plane,
   Briefcase,
   User,
-  ShieldCheck,
   Car,
 } from "lucide-react";
 
@@ -80,11 +79,11 @@ const Blog = () => {
 
   return (
     <section
-      className="bg-white py-24 px-6 min-h-screen"
+      className="bg-white pt-32 pb-24 px-6 min-h-screen"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font text-black mb-12 text-center">
+        <h1 className="text-5xl font-bold text-black mb-12 text-center">
           Our Insurance Blog
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl text-center mx-auto mb-16">
@@ -104,11 +103,11 @@ const Blog = () => {
                 className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 p-6 flex flex-col justify-between"
               >
                 <div className="mb-5">
-                  <div className="bg-orange-100 w-14 h-14 flex items-center justify-center rounded-full shadow-sm mb-4">
+                  <div className="w-14 h-14 flex justify-center items-center rounded-full bg-orange-100 shadow-sm mx-auto mb-4">
                     <Icon className="w-6 h-6 text-orange-600" />
                   </div>
 
-                  <div className="flex items-center text-sm text-gray-500 gap-4 mb-2">
+                  <div className="flex justify-center items-center text-sm text-gray-500 gap-4 mb-2">
                     <span className="flex items-center gap-1">
                       <CalendarDays className="w-4 h-4" /> {date}
                     </span>
@@ -117,18 +116,18 @@ const Blog = () => {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-semibold text-black mb-3 hover:text-orange-600 transition">
+                  <h2 className="text-xl font-semibold text-black mb-3 hover:text-orange-600 transition text-center">
                     {title}
                   </h2>
 
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 leading-relaxed text-center">
                     {expandedIndex === idx ? fullContent : summary}
                   </p>
                 </div>
 
                 <button
                   onClick={() => toggleExpand(idx)}
-                  className="text-orange-600 font-semibold text-sm hover:underline focus:outline-none"
+                  className="text-orange-600 font-semibold text-sm hover:underline focus:outline-none mx-auto"
                 >
                   {expandedIndex === idx ? "Show Less ▲" : "Read More →"}
                 </button>

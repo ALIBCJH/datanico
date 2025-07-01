@@ -51,12 +51,10 @@ const Testimonials = () => {
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-semibold text-black mb-6">
+        <h2 className="text-3xl font-light text-black mb-6">
           What Our Clients Say
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Real feedback from those who have worked with us.
-        </p>
+        
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">

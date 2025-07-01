@@ -12,17 +12,17 @@ export const navLinks = [
   {
     id: "Products",
     title: "Our Products",
-    path: "/#products", // This should link to the products section
+    path: "/products", // This should link to the products section
   },
   {
     id: "Claims",
     title: "Claims",
-    path: "/#claims", // This should link to the claims section
+    path: "/claims", // This should link to the claims section
   },
   {
     id: "Contacts",
     title: "Contact Us",
-    path: "/#contact", // This should link to the contact section
+    path: "/contact", // This should link to the contact section
   },
 ];
 export default navLinks;

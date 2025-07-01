@@ -73,7 +73,7 @@ const Faqs = () => {
       className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
-      <h1 className="text-5xl font-bold text-center text-black mb-6">
+      <h1 className="text-5xl font-light text-center text-black mb-6">
         Frequently Asked Questions
       </h1>
       <p className="text-gray-600 text-center mb-12 text-lg">

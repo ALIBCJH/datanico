@@ -1,58 +1,110 @@
 import { FaFacebookF, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Datanico from "../assets/tech/datanico.png";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer
-      className="bg-white border-t border-gray-200 text-black py-16"
+      className="bg-[#36454F] text-white pt-20 pb-10"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
-      <div className="max-w-6xl mx-auto px-6 text-center space-y-10">
-        {/* Brand & Motto */}
-        <div>
-          <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-            Datani Insurance Agency
-          </h3>
-          <p className="text-orange-600 text-xl md:text-2xl font-medium mt-2">
-            Service that Shields – Trusted. Personal. Kenyan.
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Logo & Office Info */}
+          <div>
+            <img
+              src={Datanico}
+              alt="Datani Logo"
+              className="h-14 w-auto mb-6"
+            />
+            <h4 className="text-2xl font-bold text-[#FF5722] mb-4">
+              Head Office
+            </h4>
+            <p>Mawaidatha House, Ground Floor</p>
+            <p>Kimathi Street</p>
+            <p>P.O. Box 492 - 10100 Nyeri</p>
+            <p>Tel: 0714 046 604</p>
+            <p>Email: info@datani.co.ke</p>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h4 className="text-2xl font-bold text-[#FF5722] mb-4">
+              Products
+            </h4>
+            <ul className="space-y-2">
+              <li>Motor Insurance</li>
+              <li>Medical Insurance</li>
+              <li>Property Insurance</li>
+              <li>Marine & Goods in Transit</li>
+              <li>Liability Insurance</li>
+              <li>Life Assurance</li>
+              <li>Retirement & Pension Plan</li>
+              <li>Investment Plans</li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-2xl font-bold text-orange-500 mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="hover:text-orange-400 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-orange-400 transition">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products"
+                  className="hover:text-orange-400 transition"
+                >
+                  Our Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/claims" className="hover:text-orange-400 transition">
+                  Claims
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-orange-400 transition"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Business Hours */}
+          <div>
+            <h4 className="text-2xl font-bold text-orange-500 mb-4">
+              Business Hours
+            </h4>
+            <ul className="space-y-2">
+              <li>Mon – Fri: 8:00 AM – 5:00 PM</li>
+              <li>Saturday: 9:00 AM – 1:00 PM</li>
+              <li>Sunday & Holidays: Closed</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Footer Layer */}
+        <div className="border-t border-white/20 pt-6 text-center text-1xl text-white/80">
+          <p className="italic">
+            © {year} Datani Insurance Agency. All rights reserved.
           </p>
         </div>
-
-        {/* Social Icons in Cards */}
-        <div className="flex justify-center gap-8">
-          <div className="p-4 rounded-lg border border-gray-200 hover:shadow-lg hover:shadow-orange-200 transition duration-300">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="text-orange-700 hover:text-orange-600 transition"
-            >
-              <FaFacebookF size={28} />
-            </a>
-          </div>
-
-          <div className="p-4 rounded-lg border border-gray-200 hover:shadow-lg hover:shadow-orange-200 transition duration-300">
-            <a
-              href="info@datani.co.ke"
-              aria-label="Email"
-              className="text-orange-700 hover:text-orange-600 transition"
-            >
-              <FaEnvelope size={28} />
-            </a>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="border-gray-300 w-4/5 mx-auto" />
-
-        {/* Copyright */}
-        <p className="text-base md:text-lg text-gray-500">
-          © {new Date().getFullYear()}{" "}
-          <span className="font-light text-grey">
-            Datani Insurance Agency
-          </span>
-          . All rights reserved.
-        </p>
       </div>
     </footer>
   );

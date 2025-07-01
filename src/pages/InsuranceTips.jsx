@@ -56,7 +56,7 @@ const tips = [
 const InsuranceTips = () => {
   return (
     <section
-      className="bg-white py-24 px-6"
+      className="bg-white pt-32 pb-24 px-6"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto">
@@ -74,11 +74,13 @@ const InsuranceTips = () => {
               key={index}
               className="bg-white border border-gray-200 rounded-3xl shadow-md p-6 transition duration-300 hover:shadow-lg"
             >
-              <div className="bg-orange-100 w-14 h-14 flex items-center justify-center rounded-full mb-4">
+              <div className="bg-orange-100 w-14 h-14 flex items-center justify-center rounded-full mb-4 mx-auto">
                 <Icon className="w-6 h-6 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
-              <p className="text-gray-700 leading-relaxed text-sm">
+              <h3 className="text-xl font-semibold text-black mb-2 text-center">
+                {title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm text-center">
                 {description}
               </p>
             </div>
