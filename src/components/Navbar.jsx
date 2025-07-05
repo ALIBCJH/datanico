@@ -10,8 +10,11 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 z-30 w-full bg-white py-3 px-6 sm:px-10 border-b border-black shadow-md">
+    <nav className=" w-full bg-[#ff5722] py-4 px-6 sm:px-10 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <img 
+        className="w-32 sm:w-48"
+        src={Datanico} alt="logo" />
         <Link
           to="/"
           onClick={() => {
@@ -19,22 +22,19 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img
-            src={Datanico}
-            alt="Datani Logo"
-            className="w-72 h-auto max-h-32 object-contain"
-          />
+         
         </Link>
 
-        <div className="hidden sm:flex gap-8 items-center text-black font-light">
+        {/* Desktop Nav */}
+        <div className="hidden sm:flex gap-8 items-center text-white font-light">
           {navLinks.map((link) => (
             <Link
               key={link.id}
               to={link.path}
               className={`px-4 py-2 rounded-md transition duration-200 text-xl ${
                 location.pathname === link.path
-                  ? "text-white underline underline-offset-4 bg-[#333333]"
-                  : "hover:text-white hover:bg-[#333333]"
+                  ? "underline underline-offset-4 bg-[#333333]"
+                  : "hover:bg-[#333333]"
               }`}
             >
               {link.title}
@@ -70,7 +70,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Sidebar Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] shadow-lg transition-transform duration-300 z-50 ${
           toggle ? "translate-x-0" : "translate-x-full"
@@ -108,22 +107,9 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* WhatsApp Button (Mobile) */}
-          <li>
-            <a
-              href="https://wa.me/254714046604"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-[#1EBE5D] text-white px-5 py-3 rounded-md text-lg font-semibold"
-            >
-              <FaWhatsapp className="text-2xl" />
-              WhatsApp Us
-            </a>
-          </li>
         </ul>
       </div>
 
-      {/* Backdrop */}
       {toggle && (
         <div
           onClick={() => setToggle(false)}

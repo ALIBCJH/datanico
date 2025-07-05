@@ -23,16 +23,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="bg-white min-h-screen flex flex-col">
-        <Navbar />
-
-        <div className="flex-grow">
+      <div className="bg-white">
+        <div className="">
           <Routes>
             {/* Home SPA page with scrollable sections */}
             <Route
               path="/"
               element={
                 <>
+                 <section id="#">
+                    <Navbar />
+                  </section>
                   <section id="home">
                     <Home />
                   </section>
