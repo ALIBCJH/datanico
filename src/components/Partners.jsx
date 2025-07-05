@@ -6,7 +6,7 @@ import JUBILEE from "../assets/tech/JUBILEE.png";
 import BRITAM from "../assets/tech/britam.png";
 import CIC from "../assets/tech/CIC.png";
 import oldMutual from "../assets/tech/oldMutual.png";
-import MADISON from "../assets/tech/MADISON.png";
+import MADISON from "../assets/tech/MADISON.jpg";
 import CANON from "../assets/tech/canon.png";
 import GEMINI from "../assets/tech/geminia.png";
 import HEIRTAGE from "../assets/tech/heirtage.png";
@@ -39,7 +39,7 @@ const Partners = () => {
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="w-32 h-32 object-contain"
+                className="w-36 h-36 object-contain"
               />
             </div>
           ))}

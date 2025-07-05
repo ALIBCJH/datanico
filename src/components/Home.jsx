@@ -3,17 +3,18 @@ import hero from "../assets/tech/hero.webp";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen pt-20">
-      <div className="absolute top-20 left-0 w-full h-1 bg-orange-500 z-20" />
+    <section className="relative w-full pt-20 bg-white">
+      <div className="w-full h-1 bg-orange-500 mb-2" />
 
       <img
         src={hero}
         alt="Hero"
-        className="absolute left-0 w-full h-full object-cover"
+        className="w-full object-cover max-h-[650px]"
       />
-      <div className="absolute left-32 top-[94%] z-10">
+
+      <div className="absolute top-[80%] sm:left-[60px]   lg:left-[140px] z-20">
         <Link to="/quote">
-          <button className="bg-orange-400 text-white text-lg font-semibold px-20 py-2 rounded-full shadow-2xl hover:bg-orange-700 hover:scale-105 transition-all duration-300">
+          <button className="bg-orange-500 text-white text-base sm:text-lg font-semibold px-6 sm:px-12 py-3 rounded-full shadow-md hover:bg-orange-700 hover:scale-105 transition-transform duration-300">
             Get Quote
           </button>
         </Link>
