@@ -24,6 +24,7 @@ const App = () => {
     <BrowserRouter>
       <ScrollToTop />
       <div className="bg-white">
+        <Navbar />
         <div className="">
           <Routes>
             {/* Home SPA page with scrollable sections */}
@@ -31,9 +32,6 @@ const App = () => {
               path="/"
               element={
                 <>
-                 <section id="#">
-                    <Navbar />
-                  </section>
                   <section id="home">
                     <Home />
                   </section>

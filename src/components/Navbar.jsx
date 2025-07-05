@@ -10,10 +10,10 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className=" w-full bg-[#ff5722] py-4 px-6 sm:px-10 shadow-md">
+    <nav className=" w-full fixed bg-[#ff5722] py-4 px-6 sm:px-10 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <img 
-        className="w-32 sm:w-48"
+        className="w-32 sm:w-40"
         src={Datanico} alt="logo" />
         <Link
           to="/"
