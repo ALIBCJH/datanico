@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full  bg-[#dc6903] py-4 px-6 sm:px-10 shadow-md z-50 ">
+      <nav className="w-full  bg-[#FF770F] py-4 px-6 sm:px-10 shadow-md z-50 ">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <img className="w-56" src={Datanico} alt="logo" />
 
