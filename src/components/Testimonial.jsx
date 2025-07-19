@@ -34,7 +34,7 @@ const TestimonialCard = ({ photo, name, role, text }) => (
     <img
       src={photo}
       alt={`${name}'s photo`}
-      className="w-20 h-20 rounded-full object-cover border-4 border-orange-500"
+      className="w-20 h-20 rounded-full object-cover border-4 border-[#FF770F]"
     />
     <div>
       <p className="text-gray-700 italic mb-4">“{text}”</p>

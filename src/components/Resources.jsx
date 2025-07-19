@@ -3,21 +3,21 @@ import { Newspaper, Lightbulb, HelpCircle } from "lucide-react";
 
 const resources = [
   {
-    icon: <Newspaper size={48} className="text-[#FF5722]" />,
+    icon: <Newspaper size={48} className="text-[#FF770F]" />,
     title: "Blog",
     description:
       "Stay updated with expert insights, trends, and industry news from the world of insurance.",
     link: "/blogs",
   },
   {
-    icon: <Lightbulb size={48} className="text-[#FF5722]" />,
+    icon: <Lightbulb size={48} className="text-[#FF770F]" />,
     title: "Insurance Tips",
     description:
       "Get valuable advice to help you choose the right coverage, avoid pitfalls, and save more.",
     link: "/insurancetips",
   },
   {
-    icon: <HelpCircle size={48} className="text-[#FF5722]" />,
+    icon: <HelpCircle size={48} className="text-[#FF770F]" />,
     title: "FAQs",
     description:
       "Clear answers to your most common insurance claim  questions, simplified for you.",
@@ -56,7 +56,7 @@ const Resources = () => {
               <Link
                 to={link}
                 aria-label={`Explore ${title}`}
-                className="inline-block bg-[#FFE5D3] text-[#FF5722] font-medium text-base px-6 py-3 rounded-full transition duration-300 hover:bg-[#FF5722] hover:text-white"
+                className="inline-block bg-[#FFE5D3] text-[#FF770F] font-medium text-base px-6 py-3 rounded-full transition duration-300 hover:bg-[#FF770F] hover:text-white"
               >
                 Explore
               </Link>

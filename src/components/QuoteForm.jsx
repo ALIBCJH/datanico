@@ -88,7 +88,7 @@ const QuoteForm = () => {
     <section id="get-quotation" className="bg-white py-16 px-4">
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-orange-500">
+          <h2 className="text-4xl font-extrabold text-[#FF770F]">
             Get a Quote in Minutes
           </h2>
           <p className="mt-2 text-lg text-gray-600 font-medium">
@@ -102,7 +102,7 @@ const QuoteForm = () => {
               htmlFor="fullName"
               className="block text-sm font-semibold text-gray-700"
             >
-              Full Name <span className="text-red-500">*</span>
+              Full Name <span className="text-[#FF770F]">*</span>
             </label>
             <input
               id="fullName"
@@ -110,7 +110,7 @@ const QuoteForm = () => {
               type="text"
               placeholder="Full Name"
               required
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
+              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
                 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-purple-500"
             />
           </div>
@@ -127,8 +127,8 @@ const QuoteForm = () => {
               name="email"
               type="email"
               placeholder="Email"
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
             />
           </div>
 
@@ -137,7 +137,7 @@ const QuoteForm = () => {
               htmlFor="phone"
               className="block text-sm font-semibold text-gray-700"
             >
-              Phone <span className="text-red-500">*</span>
+              Phone <span className="text-[#FF770F]">*</span>
             </label>
             <input
               id="phone"
@@ -145,8 +145,8 @@ const QuoteForm = () => {
               type="tel"
               placeholder="Phone"
               required
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
             />
           </div>
 
@@ -155,15 +155,15 @@ const QuoteForm = () => {
               htmlFor="insuranceCategory"
               className="block text-sm font-semibold text-gray-700"
             >
-              Insurance Category <span className="text-red-500">*</span>
+              Insurance Category <span className="text-[#FF770F]">*</span>
             </label>
             <select
               id="insuranceCategory"
               name="insuranceCategory"
               required
               defaultValue=""
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900
-                focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900
+                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
             >
               <option value="" disabled>
                 What type of insurance are you interested in?
@@ -183,7 +183,7 @@ const QuoteForm = () => {
               id="consent"
               name="consent"
               type="checkbox"
-              className="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+              className="h-4 w-4 rounded border-gray-300 text-[#FF770F] focus:ring-orange-500"
               required
             />
             <label
@@ -197,7 +197,7 @@ const QuoteForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 rounded-md transition duration-200 text-lg"
+            className="w-full bg-[#FF770F] hover:bg-[#FF770F] text-white font-bold py-3 rounded-md transition duration-200 text-lg"
           >
             Get a Quote
           </button>
@@ -205,7 +205,7 @@ const QuoteForm = () => {
       </div>
 
       {submitted && (
-        <div className="max-w-md mx-auto mt-6 p-4 rounded-lg border border-orange-500 bg-purple-50 text-orange-800">
+        <div className="max-w-md mx-auto mt-6 p-4 rounded-lg border border-[#FF770F] bg-purple-50 text-[#FF770F]">
           <h3 className="text-xl font-semibold mb-3">
             Best Insurance Offers for You
           </h3>

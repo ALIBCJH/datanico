@@ -1,3 +1,5 @@
+// constants.js
+
 export const navLinks = [
   {
     id: "home",
@@ -7,22 +9,46 @@ export const navLinks = [
   {
     id: "about",
     title: "About",
-    path: "/#about", //
+    path: "/#about",
   },
   {
     id: "Products",
     title: "Our Products",
-    path: "/products", // This should link to the products section
+    path: "/products",
   },
   {
     id: "Claims",
     title: "Claims",
-    path: "/claims", // This should link to the claims section
+    path: "/claims",
   },
   {
     id: "Contacts",
     title: "Contact Us",
-    path: "/contact", // This should link to the contact section
+    path: "/contact",
   },
 ];
+
+export const insuranceProducts = [
+  {
+    id: "car-insurance",
+    title: "Car Insurance",
+    path: "/insurance/car",
+  },
+  {
+    id: "health-insurance",
+    title: "Health Insurance",
+    path: "/insurance/health",
+  },
+  {
+    id: "home-insurance",
+    title: "Home Insurance",
+    path: "/insurance/home",
+  },
+  {
+    id: "travel-insurance",
+    title: "Travel Insurance",
+    path: "/insurance/travel",
+  },
+];
+
 export default navLinks;

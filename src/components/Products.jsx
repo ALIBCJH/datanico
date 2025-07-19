@@ -186,7 +186,7 @@ const Products = () => {
               <Mail className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <p className="font-semibold text-gray-800">Email</p>
+              <p className="font-semibold text-gray-800">Email Us</p>
               <p className="text-gray-600 text-sm">info@datani.co.ke</p>
             </div>
           </div>

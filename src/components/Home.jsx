@@ -3,7 +3,7 @@ import hero from "../assets/tech/hero.webp";
 
 const Hero = () => {
   return (
-    <section className=" w-full bg-white  ">
+    <section className=" w-full bg-white  relative">
       <img
         src={hero}
         alt="Hero"
@@ -11,7 +11,7 @@ const Hero = () => {
       />
       <div className=" absolute top-[85%] sm:left-[60px]   lg:left-[140px]  z-20">
         <Link to="/quote">
-          <button className="bg-orange-500 text-white text-base sm:text-lg font-semibold px-6 sm:px-12 py-3 rounded-full shadow-md hover:bg-orange-700 hover:scale-105 transition-transform duration-300">
+          <button className="bg-[#FF770F] text-white text-base sm:text-lg font-semibold px-6 sm:px-12 py-3 rounded-full shadow-md hover:bg-[#FF770F] hover:scale-105 transition-transform duration-300">
             Get Quote
           </button>
         </Link>

@@ -8,9 +8,9 @@ const About = () => {
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border-2 border-[#FF770F]">
           <div className="flex justify-center items-center mb-6">
-            <FaInfoCircle className="text-[#FF5722] text-6xl" />
+            <FaInfoCircle className="text-[#FF770F] text-6xl" />
           </div>
           <h3 className="text-4xl font-light text-black mb-4 text-center">
             About Us
@@ -25,9 +25,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border-2 border-[#FF770F]">
           <div className="flex justify-center items-center mb-6">
-            <FaEye className="text-[#FF5722] text-6xl" />
+            <FaEye className="text-[#FF770F] text-6xl" />
           </div>
           <h3 className="text-4xl font-light text-black mb-4 text-center">
             Our Vision
@@ -39,10 +39,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-16 flex justify-center">
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition max-w-3xl w-full text-center">
+      <div className="mt-16 flex justify-center b">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition max-w-3xl w-full text-center border-2 border-[#FF770F] ">
           <div className="flex justify-center items-center mb-6">
-            <FaBullseye className="text-[#FF5722] text-6xl" />
+            <FaBullseye className="text-[#FF770F] text-6xl" />
           </div>
           <h3 className="text-4xl font-light text-black mb-4">Our Mission</h3>
           <p className="text-lg leading-relaxed">

@@ -18,7 +18,7 @@ const Footer = () => {
               alt="Datani Logo"
               className="h-14 w-auto mb-6"
             />
-            <h4 className="text-2xl font-bold text-[#FF5722] mb-4">
+            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Head Office
             </h4>
             <p>Mawaidatha House, Ground Floor</p>
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h4 className="text-2xl font-bold text-[#FF5722] mb-4">
+            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Products
             </h4>
             <ul className="space-y-2">
@@ -47,37 +47,37 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-2xl font-bold text-orange-500 mb-4">
+            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-orange-400 transition">
+                <Link to="/" className="hover:text-[#FF770F] transition">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-orange-400 transition">
+                <Link to="/about" className="hover:text-[#FF770F] transition">
                   About
                 </Link>
               </li>
               <li>
                 <Link
                   to="/products"
-                  className="hover:text-orange-400 transition"
+                  className="hover:text-[#FF770F] transition"
                 >
                   Our Products
                 </Link>
               </li>
               <li>
-                <Link to="/claims" className="hover:text-orange-400 transition">
+                <Link to="/claims" className="hover:text-[#FF770F] transition">
                   Claims
                 </Link>
               </li>
               <li>
                 <Link
                   to="/contact"
-                  className="hover:text-orange-400 transition"
+                  className="hover:text-[#FF770F] transition"
                 >
                   Contact
                 </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Business Hours */}
           <div>
-            <h4 className="text-2xl font-bold text-orange-500 mb-4">
+            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Business Hours
             </h4>
             <ul className="space-y-2">
