@@ -21,7 +21,7 @@ const Footer = () => {
             <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Head Office
             </h4>
-            <p>Mawaidatha House, Ground Floor</p>
+            <p>Mawaidha House, Ground Floor</p>
             <p>Kimathi Street</p>
             <p>P.O. Box 492 - 10100 Nyeri</p>
             <p>Tel: 0714 046 604</p>
@@ -100,7 +100,7 @@ const Footer = () => {
 
         {/* Bottom Footer Layer */}
         <div className="border-t border-white/20 pt-6 text-center text-1xl text-white/80">
-          <p className="italic">
+          <p className="">
             © {year} Datani Insurance Agency. All rights reserved.
           </p>
         </div>
