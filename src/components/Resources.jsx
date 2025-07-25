@@ -29,7 +29,7 @@ const Resources = () => {
   return (
     <section
       id="resources"
-      className="bg-white py-20 px-6"
+      className="bg-[#E5E5E5] py-20 px-6"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto text-center">

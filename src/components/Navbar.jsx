@@ -17,7 +17,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Purple Bar */}
       <div className="w-full bg-[#3B2B78] text-white text-sm py-2 px-4 sm:px-10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           {/* Left Info */}
@@ -35,9 +34,10 @@ const Navbar = () => {
           <div className="flex items-center gap-6 mt-2 sm:mt-0">
             <Link to="/faqs">FAQs</Link>
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/DataniInsuranceAgency"
               target="_blank"
               rel="noopener noreferrer"
+              title="Visit Datani Insurance Agency on Facebook"
             >
               <FaFacebook className="text-white text-lg hover:text-orange-400" />
             </a>
@@ -46,31 +46,31 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="w-full bg-[#F5F5F5] shadow-md z-50">
+      <nav className="w-full sticky top-0 bg-gray-200 shadow-md z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 sm:px-10">
           {/* Logo */}
           <Link to="/">
             <img className="w-44 sm:w-52" src={Datanico} alt="logo" />
           </Link>
 
-          {/* Center Nav Links (hidden on mobile) */}
-          <div className="hidden sm:flex flex-1 justify-center items-center gap-6 font-medium text-md text-gray-700">
-            {navLinks.map((link) => (
-              <Link
-                key={link.id}
-                to={link.path}
-                className={`px-3 py-1 rounded-md transition duration-200 ${
-                  location.pathname === link.path
-                    ? "font-semibold text-orange-600"
-                    : "hover:text-orange-600"
-                }`}
-              >
-                {link.title}
-              </Link>
-            ))}
+          <div className="hidden sm:flex flex-1 justify-center items-center font-montserrat">
+            <div className="bg-[#d1d5db] px-6 py-2 rounded-md shadow-sm flex gap-6 text-gray-700 text-1xl">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.id}
+                  to={link.path}
+                  className={`px-2 py-1 rounded-md transition duration-200 ${
+                    location.pathname === link.path
+                      ? "font-semibold text-orange-600"
+                      : "hover:text-orange-600"
+                  }`}
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* WhatsApp CTA (visible on large screens) */}
           <div className="hidden sm:flex items-center gap-4">
             <a
               href="https://wa.me/254714046604"
@@ -83,14 +83,13 @@ const Navbar = () => {
               </div>
               <div className="text-right leading-tight">
                 <div className="text-[#3B2B78] font-bold text-sm">
-                  Chat on WhatsApp
+                  0714 046 604
                 </div>
-                <div className="text-gray-500 text-xs">0714 046 604</div>
+                <div className="text-gray-500 text-xs">Chat on WhatsApp</div>
               </div>
             </a>
           </div>
 
-          {/* Hamburger Icon (visible only on mobile) */}
           <div className="sm:hidden flex items-center">
             <button
               onClick={() => setToggle(true)}
@@ -106,7 +105,6 @@ const Navbar = () => {
         {toggle && (
           <>
             <div className="fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] z-50 shadow-lg transition-all duration-300">
-              {/* Close Button */}
               <div className="flex justify-end p-4">
                 <button
                   onClick={() => setToggle(false)}
@@ -117,7 +115,6 @@ const Navbar = () => {
                 </button>
               </div>
 
-              {/* Sidebar Links */}
               <ul className="flex flex-col gap-5 px-6 pt-2 text-[#e0e0e0] text-lg">
                 {navLinks.map((link) => (
                   <li key={link.id}>
@@ -135,7 +132,6 @@ const Navbar = () => {
                   </li>
                 ))}
 
-                {/* WhatsApp in mobile */}
                 <li className="mt-6">
                   <a
                     href="https://wa.me/254714046604"
@@ -150,7 +146,6 @@ const Navbar = () => {
               </ul>
             </div>
 
-            {/* Overlay */}
             <div
               onClick={() => setToggle(false)}
               className="fixed inset-0 bg-black bg-opacity-40 z-40"

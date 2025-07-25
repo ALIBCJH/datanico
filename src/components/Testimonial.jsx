@@ -46,15 +46,11 @@ const TestimonialCard = ({ photo, name, role, text }) => (
 
 const Testimonials = () => {
   return (
-    <section
-      className="bg-white py-16 px-6"
-      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
-    >
+    <section className="bg-white py-16 px-6 font-montserrat">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-3xl font-light text-black mb-6">
           What Our Clients Say
         </h2>
-        
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">

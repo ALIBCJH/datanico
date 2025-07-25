@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer
       className="bg-[#36454F] text-white pt-20 pb-10"
-      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+      style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -28,11 +28,8 @@ const Footer = () => {
             <p>Email: info@datani.co.ke</p>
           </div>
 
-          {/* Products */}
           <div>
-            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
-              Products
-            </h4>
+            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">Products</h4>
             <ul className="space-y-2">
               <li>Motor Insurance</li>
               <li>Medical Insurance</li>
@@ -45,7 +42,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Quick Links
@@ -75,17 +71,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-[#FF770F] transition"
-                >
+                <Link to="/contact" className="hover:text-[#FF770F] transition">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Business Hours */}
           <div>
             <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
               Business Hours
@@ -98,11 +90,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer Layer */}
         <div className="border-t border-white/20 pt-6 text-center text-1xl text-white/80">
-          <p className="">
-            © {year} Datani Insurance Agency. All rights reserved.
-          </p>
+          <p>© {year} Datani Insurance Agency. All rights reserved.</p>
         </div>
       </div>
     </footer>

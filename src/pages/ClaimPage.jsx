@@ -11,74 +11,74 @@ const ClaimPage = () => {
   return (
     <section
       id="claim-form"
-      className="bg-white pt-36 pb-20 px-4"
-      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+      className="bg-gray-50 pt-24 pb-20 px-4"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-orange-500">
+      <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-10 sm:p-12 transition-all">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-orange-600">
             Make a Claim
           </h2>
-          <p className="mt-2 text-lg text-gray-600 font-medium">
-            Submit your claim request below
+          <p className="mt-2 text-base sm:text-lg text-gray-600">
+            Submit your claim request below and we’ll take care of the rest.
           </p>
         </div>
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
-              Full Name <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-gray-700">
+              Full Name <span className="text-[#FF770F]">*</span>
             </label>
             <input
               type="text"
               required
               placeholder="Enter your full name"
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
+            <label className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
               type="email"
               placeholder="Enter your email"
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
-              Phone <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-gray-700">
+              Phone <span className="text-[#FF770F]">*</span>
             </label>
             <input
               type="tel"
               required
               placeholder="Enter your phone number"
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
-              Policy Number <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-gray-700">
+              Policy Number <span className="text-[#FF770F]">*</span>
             </label>
             <input
               type="text"
               required
               placeholder="Enter your policy number"
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
-              Claim Type <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-gray-700">
+              Claim Type <span className="text-[#FF770F]">*</span>
             </label>
             <select
               required
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="">Select claim type</option>
               <option value="general">General Insurance</option>
@@ -92,29 +92,31 @@ const ClaimPage = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700">
-              Claim Description <span className="text-red-500">*</span>
+            <label className="block text-sm font-medium text-gray-700">
+              Claim Description <span className="text-[#FF770F]">*</span>
             </label>
             <textarea
               required
               placeholder="Describe the reason for your claim"
-              rows={4}
-              className="mt-1 block w-full rounded-md border border-orange-500 bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              rows={5}
+              className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-[#FF5722] hover:bg-orange-800 text-white font-bold py-3 rounded-md transition duration-200 text-lg"
+            className="w-full bg-[#FF770F] hover:bg-[#FF770F] text-white font-semibold py-3 rounded-lg shadow-md transition duration-200 text-base"
           >
             Submit Claim
           </button>
         </form>
 
         {submitted && (
-          <div className="mt-6 p-4 rounded-lg border border-green-500 bg-green-50 text-green-800 text-center">
-            <h3 className="text-xl font-semibold mb-2">Claim Submitted</h3>
-            <p>We have received your claim and will process it shortly.</p>
+          <div className="mt-8 p-5 rounded-xl border border-green-500 bg-green-50 text-green-800 text-center">
+            <h3 className="text-lg font-semibold mb-2">✅ Claim Submitted</h3>
+            <p className="text-sm">
+              We have received your claim and will begin processing it shortly.
+            </p>
           </div>
         )}
       </div>

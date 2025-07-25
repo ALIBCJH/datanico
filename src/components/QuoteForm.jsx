@@ -1,4 +1,3 @@
-// src/components/QuoteForm.jsx
 import React, { useState } from "react";
 
 const categoryOffers = {
@@ -35,10 +34,7 @@ const categoryOffers = {
       details: "Roadside assistance included for all general insurance plans.",
       company: "ICEA LION General",
     },
-    {
-      details: "Easy online claim process.",
-      company: "First Assurance Kenya",
-    },
+    { details: "Easy online claim process.", company: "First Assurance Kenya" },
     {
       details: "Covers against natural disasters and theft.",
       company: "Heritage Insurance",
@@ -49,10 +45,7 @@ const categoryOffers = {
       details: "Get free towing service for the first year.",
       company: "Directline Assurance",
     },
-    {
-      details: "Zero depreciation cover included.",
-      company: "GA Insurance",
-    },
+    { details: "Zero depreciation cover included.", company: "GA Insurance" },
     {
       details: "Quick claim processing within 24 hours.",
       company: "UAP Old Mutual",
@@ -71,7 +64,6 @@ const QuoteForm = () => {
       e.target.insuranceCategory.options[
         e.target.insuranceCategory.selectedIndex
       ].text;
-
     const matchedOffers = categoryOffers[category] || [];
 
     const structuredOffers = matchedOffers.map((offer) => ({
@@ -85,13 +77,16 @@ const QuoteForm = () => {
   };
 
   return (
-    <section id="get-quotation" className="bg-white py-16 px-4">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+    <section
+      id="get-quotation"
+      className="bg-white px-4 pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-16"
+    >
+      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-xl p-6 sm:p-10">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-[#FF770F]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#FF770F]">
             Get a Quote in Minutes
           </h2>
-          <p className="mt-2 text-lg text-gray-600 font-medium">
+          <p className="mt-2 text-base sm:text-lg text-gray-600 font-medium">
             Let’s get you started
           </p>
         </div>
@@ -110,8 +105,7 @@ const QuoteForm = () => {
               type="text"
               placeholder="Full Name"
               required
-              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-purple-500"
+              className="mt-1 w-full rounded-md border border-[#FF770F] px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
@@ -127,8 +121,7 @@ const QuoteForm = () => {
               name="email"
               type="email"
               placeholder="Email"
-              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
+              className="mt-1 w-full rounded-md border border-[#FF770F] px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
@@ -145,8 +138,7 @@ const QuoteForm = () => {
               type="tel"
               placeholder="Phone"
               required
-              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
+              className="mt-1 w-full rounded-md border border-[#FF770F] px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
@@ -162,8 +154,7 @@ const QuoteForm = () => {
               name="insuranceCategory"
               required
               defaultValue=""
-              className="mt-1 block w-full rounded-md border border-[#FF770F] bg-white px-4 py-2 text-sm text-gray-900
-                focus:outline-none focus:ring-2 focus:ring-[#FF770F] focus:border-[#FF770F]"
+              className="mt-1 w-full rounded-md border border-[#FF770F] px-4 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="" disabled>
                 What type of insurance are you interested in?
@@ -197,7 +188,7 @@ const QuoteForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#FF770F] hover:bg-[#FF770F] text-white font-bold py-3 rounded-md transition duration-200 text-lg"
+            className="w-full bg-[#FF770F] hover:bg-[#e86500] text-white font-bold py-3 rounded-md transition duration-200 text-lg"
           >
             Get a Quote
           </button>
@@ -205,8 +196,8 @@ const QuoteForm = () => {
       </div>
 
       {submitted && (
-        <div className="max-w-md mx-auto mt-6 p-4 rounded-lg border border-[#FF770F] bg-purple-50 text-[#FF770F]">
-          <h3 className="text-xl font-semibold mb-3">
+        <div className="max-w-2xl mx-auto mt-8 p-6 rounded-lg border border-[#FF770F] bg-orange-50 text-[#FF770F]">
+          <h3 className="text-xl font-semibold mb-4">
             Best Insurance Offers for You
           </h3>
           <ul className="list-disc list-inside space-y-3">

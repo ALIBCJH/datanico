@@ -24,13 +24,13 @@ const claimSteps = [
 const RequirementClaim = () => {
   return (
     <section
-      className="min-h-screen bg-white px-6 pt-32 pb-20 max-w-6xl mx-auto"
-      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+      className="min-h-screen bg-gray-50 px-6 pt-18 pb-20 max-w-6xl mx-auto"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
-      <h1 className="text-5xl font-light text-black mb-6 text-center">
+      <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-6 text-center">
         Claims Process
       </h1>
-      <p className="text-gray-700 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+      <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
         Filing a claim doesn’t have to be stressful. At Datani Insurance Agency,
         we guide you step-by-step to ensure your claim is handled quickly and
         fairly.
@@ -40,9 +40,11 @@ const RequirementClaim = () => {
         {claimSteps.map(({ title, content }, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm transition duration-200 hover:shadow-md "
+            className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-200"
           >
-            <h2 className="text-2xl font-light text-black mb-4">{title}</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-[#FF770F] mb-3">
+              {title}
+            </h2>
             <p className="text-gray-700 whitespace-pre-line text-base leading-relaxed">
               {content}
             </p>
@@ -51,40 +53,41 @@ const RequirementClaim = () => {
       </div>
 
       {/* Contact Cards */}
-      <div className="grid gap-6 sm:grid-cols-2 mt-16">
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 flex items-start gap-4 ">
-          <div className="bg-orange-100 text-orange-600 p-3 rounded-full">
-            <Phone size={28} />
+      <div className="grid gap-6 sm:grid-cols-2 mt-20">
+        <div className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm">
+          <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
+            <Phone size={26} />
           </div>
           <div>
-            <h3 className="text-xl font-light text-black mb-1">
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">
               Call Our Hotline
             </h3>
-            <p className="text-gray-700 text-lg">0714 046604</p>
+            <p className="text-gray-600 text-base">0714 046604</p>
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 flex items-start gap-4 hover:bg-orange-100 transition">
-          <div className="bg-orange-100 text-orange-600 p-3 rounded-full">
-            <Mail size={28} />
+        <div className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-orange-50 transition">
+          <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
+            <Mail size={26} />
           </div>
           <div>
-            <h3 className="text-xl font-light text-black mb-1">
+            <h3 className="text-lg font-semibold text-gray-800 mb-1">
               Email Our Team
             </h3>
-            <p className="text-gray-700 text-lg">info@datani.co.ke</p>
+            <p className="text-gray-600 text-base">info@datani.co.ke</p>
           </div>
         </div>
       </div>
 
+      {/* Action Buttons */}
       <div className="flex justify-center gap-4 mt-16 flex-wrap">
         <Link to="/faqs">
-          <button className="bg-[#FF5722]  text-white text-lg px-6 py-3 rounded-xl font-semibold transition">
+          <button className="bg-[#FF770F] hover:bg-orange-700 text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
             FAQs
           </button>
         </Link>
         <Link to="/claimpage">
-          <button className="bg-[#FF5722]  text-white text-lg px-6 py-3 rounded-xl font-semibold transition">
+          <button className="bg-[#FF770F] hover:bg-orange-700 text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
             File a Claim
           </button>
         </Link>

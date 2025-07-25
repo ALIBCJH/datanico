@@ -32,13 +32,13 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-white pt-32 pb-20 px-6 sm:px-10"
+      className="bg-white pt-18 pb-20 px-6 sm:px-10"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
         <div className="bg-white rounded-xl shadow-md p-8">
-          <h2 className="text-3xl font-light text-black mb-4">
+          <h2 className="text-4xl font-light text-black mb-4">
             Get in Touch
           </h2>
           <p className="text-lg text-gray-600 mb-6">
@@ -49,7 +49,7 @@ const Contact = () => {
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm text-gray-700 font-medium">
-                Name <span className="text-red-500">*</span>
+                Name <span className="text-[#FF770F]">*</span>
               </label>
               <input
                 type="text"
@@ -58,7 +58,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF5722]"
+                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF770F]"
               />
             </div>
 
@@ -72,13 +72,13 @@ const Contact = () => {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF5722]"
+                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF770F]"
               />
             </div>
 
             <div>
               <label className="block text-sm text-gray-700 font-medium">
-                Phone <span className="text-red-500">*</span>
+                Phone <span className="text-[#FF770F]">*</span>
               </label>
               <input
                 type="tel"
@@ -93,7 +93,7 @@ const Contact = () => {
 
             <div>
               <label className="block text-sm text-gray-700 font-medium">
-                Message <span className="text-red-500">*</span>
+                Message <span className="text-[#FF770F]">*</span>
               </label>
               <textarea
                 name="message"
@@ -102,7 +102,7 @@ const Contact = () => {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF5722]"
+                className="mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF770F]"
               ></textarea>
             </div>
 

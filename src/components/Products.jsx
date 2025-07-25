@@ -114,8 +114,8 @@ const productData = [
 const Products = () => {
   return (
     <section
-      className="min-h-screen bg-white px-6 pt-32 pb-20 max-w-7xl mx-auto"
-      style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
+      className="min-h-screen bg-white px-6 pt-18 pb-20 max-w-7xl mx-auto"
+      style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <h1 className="text-4xl sm:text-5xl font-light text-black mb-8 text-center">
         Our Insurance Products
@@ -129,7 +129,7 @@ const Products = () => {
           >
             <div>
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-                <Icon className="w-8 h-8 text-[#FF5722]" />
+                <Icon className="w-8 h-8 text-[#FF770F]" />
               </div>
               <h2 className="text-xl font-semibold text-center text-black mb-2">
                 {title}
@@ -141,7 +141,7 @@ const Products = () => {
                 {points.map((point, i) => (
                   <li
                     key={i}
-                    className="hover:text-orange-600 transition-colors duration-200"
+                    className="hover:text-[#FF770F] transition-colors duration-200"
                   >
                     {point}
                   </li>
@@ -150,7 +150,7 @@ const Products = () => {
             </div>
             <Link
               to="/quote"
-              className="block bg-[#FF5722] hover:bg-orange-600 text-white text-sm font-semibold px-5 py-3 rounded-xl text-center mt-6 transition duration-200"
+              className="block bg-[#FF770F] hover:bg-[#FF770F] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center mt-6 transition duration-200"
             >
               Get a Quote
             </Link>
@@ -171,7 +171,7 @@ const Products = () => {
         <div className="flex flex-wrap justify-center gap-6">
           {/* Phone */}
           <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
-            <div className="bg-orange-100 text-orange-600 p-3 rounded-full">
+            <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
               <PhoneCall className="w-6 h-6" />
             </div>
             <div className="text-left">
@@ -182,7 +182,7 @@ const Products = () => {
 
           {/* Email */}
           <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
-            <div className="bg-orange-100 text-orange-600 p-3 rounded-full">
+            <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
               <Mail className="w-6 h-6" />
             </div>
             <div className="text-left">
