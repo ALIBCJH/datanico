@@ -32,11 +32,10 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-white pt-18 pb-20 px-6 sm:px-10"
+      className="bg-white pt-11 pb-20 px-6 sm:px-10"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Contact Form */}
         <div className="bg-white rounded-xl shadow-md p-8">
           <h2 className="text-4xl font-light text-black mb-4">
             Get in Touch

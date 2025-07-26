@@ -24,7 +24,7 @@ const claimSteps = [
 const RequirementClaim = () => {
   return (
     <section
-      className="min-h-screen bg-gray-50 px-6 pt-18 pb-20 max-w-6xl mx-auto"
+      className="min-h-screen bg-gray-50 px-6 pt-11 pb-20 max-w-6xl mx-auto"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-6 text-center">
@@ -52,7 +52,6 @@ const RequirementClaim = () => {
         ))}
       </div>
 
-      {/* Contact Cards */}
       <div className="grid gap-6 sm:grid-cols-2 mt-20">
         <div className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm">
           <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">

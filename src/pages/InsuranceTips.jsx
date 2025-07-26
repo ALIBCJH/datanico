@@ -56,7 +56,7 @@ const tips = [
 const InsuranceTips = () => {
   return (
     <section
-      className="bg-white pt-32 pb-24 px-6"
+      className="bg-white pt-11 pb-24 px-6"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto">

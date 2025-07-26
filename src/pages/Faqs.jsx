@@ -70,7 +70,7 @@ const Faqs = () => {
 
   return (
     <section
-      className="min-h-screen pt-32 pb-20 px-6 max-w-4xl mx-auto"
+      className="min-h-screen pt-11 pb-20 px-6 max-w-4xl mx-auto"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <h1 className="text-5xl font-light text-center text-black mb-6">

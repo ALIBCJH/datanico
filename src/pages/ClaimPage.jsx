@@ -11,12 +11,12 @@ const ClaimPage = () => {
   return (
     <section
       id="claim-form"
-      className="bg-gray-50 pt-24 pb-20 px-4"
+      className="bg-gray-50 pt-11 pb-20 px-4"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-10 sm:p-12 transition-all">
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-orange-600">
+          <h2 className="text-3xl sm:text-4xl font-light text-black-600">
             Make a Claim
           </h2>
           <p className="mt-2 text-base sm:text-lg text-gray-600">

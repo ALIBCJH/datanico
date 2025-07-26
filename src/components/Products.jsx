@@ -114,7 +114,7 @@ const productData = [
 const Products = () => {
   return (
     <section
-      className="min-h-screen bg-white px-6 pt-18 pb-20 max-w-7xl mx-auto"
+      className="min-h-screen bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
       <h1 className="text-4xl sm:text-5xl font-light text-black mb-8 text-center">

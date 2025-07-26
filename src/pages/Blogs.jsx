@@ -53,7 +53,7 @@ const Blog = () => {
 
   return (
     <section
-      className="bg-white pt-32 pb-24 px-6 min-h-screen"
+      className="bg-white pt-11 pb-24 px-6 min-h-screen"
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto">

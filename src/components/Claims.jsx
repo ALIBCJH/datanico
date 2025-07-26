@@ -26,7 +26,7 @@ const Claims = () => {
   return (
     <section
       id="claims"
-      className="bg-white pt-19 pb-20 px-6 sm:px-10"
+      className="bg-white pt-11 pb-20 px-6 sm:px-10"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="max-w-6xl mx-auto text-center">
