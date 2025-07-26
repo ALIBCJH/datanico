@@ -9,7 +9,7 @@ const Hero = () => {
         alt="Hero"
         className=""
       />
-      <div className=" absolute top-[85%] sm:left-[60px]   lg:left-[140px]  z-20">
+      <div className=" absolute top-[80%] sm:left-[60px]   lg:left-[140px]  z-20">
         <Link to="/quote">
           <button className="bg-[#FF770F] text-white text-base sm:text-lg font-semibold px-6 sm:px-12 py-3 rounded-full shadow-md hover:bg-[#FF770F] hover:scale-105 transition-transform duration-300">
             Get Quote

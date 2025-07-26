@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiFacebookCircleFill } from "react-icons/ri";
+import FacebookIcon from "../assets/tech/facebookicon.png";
 
 import { navLinks } from "../constants";
 import Datanico from "../assets/tech/datanico.png";
@@ -46,14 +47,17 @@ const Navbar = () => {
             >
               <FaXTwitter className="text-white text-lg hover:text-orange-400" />
             </a>
-
             <a
               href="https://web.facebook.com/profile.php?id=100064025505143"
               target="_blank"
               rel="noopener noreferrer"
-              title="Visit us on Facebook"
+              title="Visit Datani on Facebook"
             >
-              <RiFacebookCircleFill className="text-white text-xl hover:text-orange-400" />
+              <img
+                src={FacebookIcon}
+                alt="Facebook"
+                className="w-4 h-4 sm:w-6 sm:h-6 object-contain hover:opacity-80 transition "
+              />
             </a>
           </div>
         </div>
