@@ -39,35 +39,9 @@ const blogPosts = [
     readTime: "5 min read",
     icon: Car,
   },
-  {
-    title: "Home Insurance: What’s Covered and What’s Not",
-    date: "May 10, 2025",
-    summary:
-      "Home insurance can protect your most valuable asset — your house.",
-    fullContent:
-      "Home insurance can protect your most valuable asset — your house. But many homeowners misunderstand what’s covered. This post details the inclusions, exclusions, and how to avoid surprises during claims.",
-    readTime: "4 min read",
-    icon: Home,
-  },
-  {
-    title: "Travel Insurance Tips for a Safe Journey",
-    date: "April 29, 2025",
-    summary:
-      "Heading abroad? Here’s how travel insurance can save you from financial loss.",
-    fullContent:
-      "Travel insurance is your safety net abroad. From flight cancellations to medical emergencies, this article outlines why you should never travel without a good plan—and how to pick one that fits.",
-    readTime: "3 min read",
-    icon: Plane,
-  },
-  {
-    title: "Business Insurance for Startups: What You Need to Know",
-    date: "April 15, 2025",
-    summary: "Launching a business? Don’t overlook insurance.",
-    fullContent:
-      "If you're launching a business, insurance might not be top of mind—but it should be. This post explains how general liability, property, and professional indemnity cover can shield your startup from early losses.",
-    readTime: "4 min read",
-    icon: Briefcase,
-  },
+  
+
+ 
 ];
 
 const Blog = () => {
@@ -83,7 +57,7 @@ const Blog = () => {
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-black mb-12 text-center">
+        <h1 className="text-5xl font-light text-black mb-12 text-center">
           Our Insurance Blog
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl text-center mx-auto mb-16">
