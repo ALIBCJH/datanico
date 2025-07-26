@@ -28,7 +28,7 @@ const About = () => {
             Our Vision
           </h3>
           <p className="text-lg leading-relaxed text-center">
-            To be Kenya’s most trusted and customer-driven insurance agency, known for personalized service and lasting impact.
+            To be the most trusted and customer-driven insurance agency, known for personalized service and lasting impact.
           </p>
         </div>
       </div>
@@ -40,7 +40,7 @@ const About = () => {
           </div>
           <h3 className="text-4xl font-light text-black mb-4">Our Mission</h3>
           <p className="text-lg leading-relaxed">
-            To empower you with insurance solutions that offer peace of mind, financial protection, and confidence in life’s uncertain moments.
+            To empower our clients with insurance solutions that offer peace of mind, financial protection, and confidence in life’s uncertain moments.
           </p>
         </div>
       </div>

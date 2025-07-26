@@ -1,24 +1,18 @@
 import { FaFacebookF, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Datanico from "../assets/tech/datanico.png";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
     <footer
-      className="bg-[#36454F] text-white pt-20 pb-10"
+      className="bg-[#352969] text-white pt-20 pb-10"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
-            <img
-              src={Datanico}
-              alt="Datani Logo"
-              className="h-14 w-auto mb-6"
-            />
-            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
+            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
               Head Office
             </h4>
             <p>Mawaidha House, Ground Floor</p>
@@ -29,7 +23,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">Products</h4>
+            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">Products</h4>
             <ul className="space-y-2">
               <li>Motor Insurance</li>
               <li>Medical Insurance</li>
@@ -43,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
+            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -79,7 +73,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-2xl font-bold text-[#FF770F] mb-4">
+            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
               Business Hours
             </h4>
             <ul className="space-y-2">

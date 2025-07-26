@@ -7,7 +7,10 @@ import {
   FaWhatsapp,
   FaBars,
   FaTimes,
+  FaPhoneAlt,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { navLinks } from "../constants";
 import Datanico from "../assets/tech/datanico.png";
 
@@ -22,8 +25,8 @@ const Navbar = () => {
           {/* Left Info */}
           <div className="flex items-center gap-6 flex-wrap">
             <span className="flex items-center gap-1">
-              <FaMapMarkerAlt className="text-orange-500" />
-              Mawaidha House, Nyeri Town
+              <FaPhoneAlt className="text-orange-500" />
+              0714 046 604
             </span>
             <span className="flex items-center gap-1">
               <FaEnvelope className="text-orange-500" />
@@ -33,11 +36,21 @@ const Navbar = () => {
 
           <div className="flex items-center gap-6 mt-2 sm:mt-0">
             <Link to="/faqs">FAQs</Link>
+
+            <a
+              href="https://x.com/DataniInsuranceAgency"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Visit Datani on X"
+            >
+              <FaXTwitter className="text-white text-lg hover:text-orange-400" />
+            </a>
+
             <a
               href="https://facebook.com/DataniInsuranceAgency"
               target="_blank"
               rel="noopener noreferrer"
-              title="Visit Datani Insurance Agency on Facebook"
+              title="Visit Datani on Facebook"
             >
               <FaFacebook className="text-white text-lg hover:text-orange-400" />
             </a>
@@ -46,7 +59,10 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="w-full sticky top-0 bg-gray-200 shadow-md z-50">
+      <nav
+        className="w-full sticky top-0 bg-gray-200 shadow-md z-50 border-b-2"
+        style={{ borderBottomColor: "#68579A" }}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 sm:px-10">
           {/* Logo */}
           <Link to="/">
@@ -82,7 +98,7 @@ const Navbar = () => {
                 <FaWhatsapp className="text-white" />
               </div>
               <div className="text-right leading-tight">
-                <div className="text-[#3B2B78] font-bold text-sm">
+                <div className="text-[#352969] font-bold text-sm">
                   0714 046 604
                 </div>
                 <div className="text-gray-500 text-xs">Chat on WhatsApp</div>
