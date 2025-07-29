@@ -18,6 +18,7 @@ import InsuranceTips from "./pages/InsuranceTips";
 import ClaimPage from "./pages/ClaimPage";
 import RequirementClaim from "./pages/RequirementClaim";
 import Faqs from "./pages/Faqs";
+import CookieConsent from "./components/cookieConsent";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <ScrollToTop />
       <div className="bg-white">
         <Navbar />
+
         <div className="">
           <Routes>
             {/* Home SPA page with scrollable sections */}
@@ -53,7 +55,6 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/claims" element={<Claims />} />
             <Route path="/contact" element={<Contact />} />
-
             <Route path="/quote" element={<Quote />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/insurancetips" element={<InsuranceTips />} />
@@ -62,6 +63,9 @@ const App = () => {
             <Route path="/faqs" element={<Faqs />} />
           </Routes>
         </div>
+
+        {/* ✅ Place CookieConsent here so it's visible on all pages */}
+        <CookieConsent />
 
         <Footer />
       </div>
