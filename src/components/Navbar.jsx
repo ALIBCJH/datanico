@@ -24,7 +24,7 @@ const Navbar = () => {
     <>
       <div className="w-full bg-[#3B2B78] text-white text-sm py-2 px-4 sm:px-10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          {/* Left Info */}
+
           <div className="flex items-center gap-6 flex-wrap">
             <span className="flex items-center gap-1">
               <FaPhoneAlt className="text-orange-500" />
@@ -63,7 +63,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navbar */}
       <nav
         className="w-full sticky top-0 bg-gray-200 shadow-md z-50 border-b-2"
         style={{ borderBottomColor: "#68579A" }}
@@ -122,7 +121,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Sidebar */}
         {toggle && (
           <>
             <div className="fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] z-50 shadow-lg transition-all duration-300">

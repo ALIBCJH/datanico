@@ -158,7 +158,6 @@ const Products = () => {
         ))}
       </div>
 
-      {/* Contact Info */}
       <div className="mt-28 text-center">
         <h3 className="text-2xl font-light text-black mb-4">
           Let’s Help You Pick the Right Product
@@ -169,7 +168,7 @@ const Products = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          {/* Phone */}
+          
           <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
             <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
               <PhoneCall className="w-6 h-6" />
@@ -180,7 +179,7 @@ const Products = () => {
             </div>
           </div>
 
-          {/* Email */}
+      
           <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
             <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
               <Mail className="w-6 h-6" />

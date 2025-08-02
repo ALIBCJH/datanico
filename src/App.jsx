@@ -29,7 +29,6 @@ const App = () => {
 
         <div className="">
           <Routes>
-            {/* Home SPA page with scrollable sections */}
             <Route
               path="/"
               element={
@@ -51,7 +50,6 @@ const App = () => {
               }
             />
 
-            {/* Other full pages */}
             <Route path="/products" element={<Products />} />
             <Route path="/claims" element={<Claims />} />
             <Route path="/contact" element={<Contact />} />
@@ -63,8 +61,6 @@ const App = () => {
             <Route path="/faqs" element={<Faqs />} />
           </Routes>
         </div>
-
-        {/* ✅ Place CookieConsent here so it's visible on all pages */}
         <CookieConsent />
 
         <Footer />

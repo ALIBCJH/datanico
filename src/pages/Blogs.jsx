@@ -39,9 +39,6 @@ const blogPosts = [
     readTime: "5 min read",
     icon: Car,
   },
-  
-
- 
 ];
 
 const Blog = () => {
@@ -78,7 +75,7 @@ const Blog = () => {
               >
                 <div className="mb-5">
                   <div className="w-14 h-14 flex justify-center items-center rounded-full bg-orange-100 shadow-sm mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-orange-600" />
+                    <Icon className="text-2xl text-orange-600" />
                   </div>
 
                   <div className="flex justify-center items-center text-sm text-gray-500 gap-4 mb-2">

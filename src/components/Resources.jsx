@@ -3,21 +3,21 @@ import { Newspaper, Lightbulb, HelpCircle } from "lucide-react";
 
 const resources = [
   {
-    icon: <Newspaper size={48} className="text-[#FF770F]" />,
-    title: "Blog",
+    icon: <Newspaper size={40} className="text-[#FF770F]" />,
+    title: "Testimonials",
     description:
-      "Stay updated with expert insights, trends, and industry news from the world of insurance.",
-    link: "/blogs",
+      "Hear what our customers say about us.",
+    link: "/testimonial",
   },
   {
-    icon: <Lightbulb size={48} className="text-[#FF770F]" />,
+    icon: <Lightbulb size={44} className="text-[#FF770F]" />,
     title: "Insurance Tips",
     description:
       "Get valuable advice to help you choose the right coverage, avoid pitfalls, and save more.",
     link: "/insurancetips",
   },
   {
-    icon: <HelpCircle size={48} className="text-[#FF770F]" />,
+    icon: <HelpCircle size={44} className="text-[#FF770F]" />,
     title: "FAQs",
     description:
       "Clear answers to your most common insurance claim  questions, simplified for you.",
