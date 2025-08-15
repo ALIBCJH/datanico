@@ -14,7 +14,7 @@ import Quote from "./pages/Quote";
 import About from "./components/About";
 import Claims from "./components/Claims";
 import Resources from "./components/Resources";
-import Blogs from "./pages/Blogs";
+import Blogs from "./pages/BlogDetails";
 import InsuranceTips from "./pages/InsuranceTips";
 import ClaimPage from "./pages/ClaimPage";
 import RequirementClaim from "./pages/RequirementClaim";
@@ -67,7 +67,7 @@ const App = () => {
 
           <Route path="/services" element={<Service />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<BlogsDetails />} />
           <Route path="/insurancetips" element={<InsuranceTips />} />
           <Route path="/claimpage" element={<ClaimPage />} />
           <Route path="/requirementclaim" element={<RequirementClaim />} />
