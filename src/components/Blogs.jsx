@@ -1,17 +1,10 @@
-import React, { useState } from "react";
-import {
-  CalendarDays,
-  Clock,
-  HeartPulse,
-  Home,
-  Plane,
-  Briefcase,
-  User,
-  Car,
-} from "lucide-react";
+import React from "react";
+import { CalendarDays, Clock, HeartPulse, User, Car } from "lucide-react";
+import { Link, Route, Routes } from "react-router-dom";
 
 const blogPosts = [
   {
+    id: 1,
     title: "Why Life Insurance is a Must for Every Family",
     date: "June 5, 2025",
     summary:
@@ -22,6 +15,7 @@ const blogPosts = [
     icon: User,
   },
   {
+    id: 2,
     title: "Top 5 Health Insurance Myths Debunked",
     date: "May 28, 2025",
     summary: "Many people avoid getting insured due to common misconceptions.",
@@ -31,6 +25,7 @@ const blogPosts = [
     icon: HeartPulse,
   },
   {
+    id: 3,
     title: "How to Choose the Right Vehicle Insurance",
     date: "May 18, 2025",
     summary: "Confused between third-party, comprehensive, or zero-dep?",
@@ -41,13 +36,8 @@ const blogPosts = [
   },
 ];
 
-const Blog = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
-
-  const toggleExpand = (index) => {
-    setExpandedIndex((prev) => (prev === index ? null : index));
-  };
-
+// Blog list page
+const BlogList = () => {
   return (
     <section
       className="bg-white pt-11 pb-24 px-6 min-h-screen"
@@ -65,12 +55,9 @@ const Blog = () => {
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map(
-            (
-              { title, date, summary, fullContent, readTime, icon: Icon },
-              idx
-            ) => (
+            ({ id, title, date, summary, readTime, icon: Icon }) => (
               <div
-                key={idx}
+                key={id}
                 className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 p-6 flex flex-col justify-between"
               >
                 <div className="mb-5">
@@ -92,16 +79,16 @@ const Blog = () => {
                   </h2>
 
                   <p className="text-gray-700 leading-relaxed text-center">
-                    {expandedIndex === idx ? fullContent : summary}
+                    {summary}
                   </p>
                 </div>
 
-                <button
-                  onClick={() => toggleExpand(idx)}
+                <Link
+                  to={`/blog/${id}`}
                   className="text-orange-600 font-semibold text-sm hover:underline focus:outline-none mx-auto"
                 >
-                  {expandedIndex === idx ? "Show Less ▲" : "Read More →"}
-                </button>
+                  Read More →
+                </Link>
               </div>
             )
           )}
@@ -109,6 +96,45 @@ const Blog = () => {
       </div>
     </section>
   );
+};
+
+// Blog details page
+const BlogDetails = ({ id }) => {
+  const post = blogPosts.find((p) => p.id === Number(id));
+  if (!post) return <p className="text-center mt-20">Blog not found</p>;
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 py-12">
+      <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+      <p className="text-gray-500 text-sm mb-6">
+        {post.date} • {post.readTime}
+      </p>
+      <p className="text-gray-800 leading-relaxed">{post.fullContent}</p>
+
+      <Link
+        to="/"
+        className="mt-8 inline-block text-orange-600 font-semibold hover:underline"
+      >
+        ← Back to Blog
+      </Link>
+    </div>
+  );
+};
+
+// Wrapper with routing
+const Blog = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<BlogList />} />
+      <Route path="/blog/:id" element={<RouteRenderer />} />
+    </Routes>
+  );
+};
+
+// Small helper to read the :id param
+const RouteRenderer = () => {
+  const { id } = useParams();
+  return <BlogDetails id={id} />;
 };
 
 export default Blog;

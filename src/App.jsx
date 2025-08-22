@@ -13,11 +13,12 @@ import Quote from "./pages/Quote";
 import About from "./components/About";
 import Claims from "./components/Claims";
 import Resources from "./components/Resources";
-import Blogs from "./pages/Blogs";
+import Blogs from "./components/Blogs";
 import InsuranceTips from "./pages/InsuranceTips";
 import ClaimPage from "./pages/ClaimPage";
 import RequirementClaim from "./pages/RequirementClaim";
 import Faqs from "./pages/Faqs";
+import BlogPage from "./pages/BlogPage";
 import CookieConsent from "./components/cookieConsent";
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
             <Route path="/claimpage" element={<ClaimPage />} />
             <Route path="/requirementclaim" element={<RequirementClaim />} />
             <Route path="/faqs" element={<Faqs />} />
+            <Route path="/blog/:id" element={<BlogPage />} />
           </Routes>
         </div>
         <CookieConsent />
