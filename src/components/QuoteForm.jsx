@@ -78,9 +78,10 @@ const QuoteForm = () => {
 
   return (
     <section
-      id="get-quotation"
-      className="bg-white px-4 pt-11 sm:pt-8 md:pt-11 lg:pt-11 pb-16"
-    >
+  id="get-quotation"
+  className="bg-white px-4 pt-0 -mt-4 pb-16"
+>
+
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-xl p-6 sm:p-10">
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#FF770F]">
