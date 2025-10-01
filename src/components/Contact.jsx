@@ -15,6 +15,7 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -23,11 +24,34 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted data:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setLoading(true);
+    setSubmitted(false);
+
+    try {
+      const res = await fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("❌ Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("⚠️ Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -36,10 +60,9 @@ const Contact = () => {
       style={{ fontFamily: "Segoe UI, SegoeUI, sans-serif" }}
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+        {/* Form Section */}
         <div className="bg-white rounded-xl shadow-md p-8">
-          <h2 className="text-4xl font-light text-black mb-4">
-            Get in Touch
-          </h2>
+          <h2 className="text-4xl font-light text-black mb-4">Get in Touch</h2>
           <p className="text-lg text-gray-600 mb-6">
             Have a question or want to work with us? Fill out the form and we’ll
             respond shortly.
@@ -107,9 +130,14 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#FFE5D3] text-[#FF5722] py-3 rounded-md text-lg font-medium transition duration-300 hover:bg-[#FF5722] hover:text-white"
+              disabled={loading}
+              className={`w-full py-3 rounded-md text-lg font-medium transition duration-300 ${
+                loading
+                  ? "bg-gray-400 text-white cursor-not-allowed"
+                  : "bg-[#FFE5D3] text-[#FF5722] hover:bg-[#FF5722] hover:text-white"
+              }`}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
 
