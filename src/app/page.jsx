@@ -7,6 +7,18 @@ import JsonLd from "@/components/JsonLd";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://datani.co.ke";
 
+export const metadata = {
+  description:
+    "Datani Insurance Agency in Nyeri, Kenya — motor, medical, property, life, travel and business insurance. Expert advice, reliable protection and fast claims. Get a free quote today.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    title: "Datani Insurance Agency | Service That Shields",
+    description:
+      "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya. Get a free quote today.",
+  },
+};
+
 const agencyJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
@@ -47,7 +59,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Partners />
-      <BlogList />
+      <BlogList variant="preview" />
       <Resources />
     </>
   );
