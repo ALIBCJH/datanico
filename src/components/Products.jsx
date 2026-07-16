@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import {
   Car,
   HeartPulse,
@@ -13,6 +12,7 @@ import {
   Truck,
   Briefcase,
 } from "lucide-react";
+import { CONTACT } from "@/data/constants";
 
 const productData = [
   {
@@ -62,7 +62,7 @@ const productData = [
     subtitle: "Protect Your Business from Legal Risks",
     points: [
       "Public Liability Insurance",
-      "Employer’s Liability",
+      "Employer's Liability",
       "Professional Indemnity Cover",
       "Directors & Officers Liability (D&O)",
     ],
@@ -113,35 +113,28 @@ const productData = [
 
 const Products = () => {
   return (
-    <section
-      className="min-h-screen bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto"
-      style={{ fontFamily: "'Montserrat', sans-serif" }}
-    >
+    <section className="min-h-screen bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto font-montserrat">
       <h1 className="text-4xl sm:text-5xl font-light text-black mb-8 text-center">
         Our Insurance Products
       </h1>
 
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {productData.map(({ title, subtitle, points, icon: Icon }, idx) => (
+        {productData.map(({ title, subtitle, points, icon: Icon }) => (
           <div
-            key={idx}
+            key={title}
             className="bg-white rounded-3xl shadow-md hover:shadow-lg border border-gray-200 transition duration-300 p-8 flex flex-col justify-between"
           >
             <div>
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
-                <Icon className="w-8 h-8 text-[#FF770F]" />
+                <Icon className="w-8 h-8 text-brand-orange" />
               </div>
-              <h2 className="text-xl font-semibold text-center text-black mb-2">
-                {title}
-              </h2>
-              <p className="text-md text-center text-gray-700 font-medium mb-4">
-                {subtitle}
-              </p>
+              <h2 className="text-xl font-semibold text-center text-black mb-2">{title}</h2>
+              <p className="text-center text-gray-700 font-medium mb-4">{subtitle}</p>
               <ul className="list-disc text-gray-600 text-sm space-y-3 leading-relaxed pl-5">
-                {points.map((point, i) => (
+                {points.map((point) => (
                   <li
-                    key={i}
-                    className="hover:text-[#FF770F] transition-colors duration-200"
+                    key={point}
+                    className="hover:text-brand-orange transition-colors duration-200"
                   >
                     {point}
                   </li>
@@ -149,8 +142,8 @@ const Products = () => {
               </ul>
             </div>
             <Link
-              to="/quote"
-              className="block bg-[#FF770F] hover:bg-[#FF770F] text-white text-sm font-semibold px-5 py-3 rounded-xl text-center mt-6 transition duration-200"
+              href="/quote"
+              className="block bg-brand-orange hover:brightness-95 text-white text-sm font-semibold px-5 py-3 rounded-xl text-center mt-6 transition duration-200"
             >
               Get a Quote
             </Link>
@@ -159,36 +152,40 @@ const Products = () => {
       </div>
 
       <div className="mt-28 text-center">
-        <h3 className="text-2xl font-light text-black mb-4">
-          Let’s Help You Pick the Right Product
-        </h3>
+        <h2 className="text-2xl font-light text-black mb-4">
+          Let&apos;s Help You Pick the Right Product
+        </h2>
         <p className="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Whether you’re getting started with insurance or reviewing your
-          current policy, our team is here to support you every step of the way.
+          Whether you&apos;re getting started with insurance or reviewing your current
+          policy, our team is here to support you every step of the way.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6">
-          
-          <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
-            <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
+          <a
+            href={`tel:+${CONTACT.phoneIntl}`}
+            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]"
+          >
+            <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
               <PhoneCall className="w-6 h-6" />
             </div>
             <div className="text-left">
               <p className="font-semibold text-gray-800">Call us</p>
-              <p className="text-gray-600 text-sm">0714 046 604</p>
+              <p className="text-gray-600 text-sm">{CONTACT.phone}</p>
             </div>
-          </div>
+          </a>
 
-      
-          <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]">
-            <div className="bg-orange-100 text-[#FF770F] p-3 rounded-full">
+          <a
+            href={`mailto:${CONTACT.email}`}
+            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]"
+          >
+            <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
               <Mail className="w-6 h-6" />
             </div>
             <div className="text-left">
               <p className="font-semibold text-gray-800">Email Us</p>
-              <p className="text-gray-600 text-sm">info@datani.co.ke</p>
+              <p className="text-gray-600 text-sm">{CONTACT.email}</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
