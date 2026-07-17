@@ -190,13 +190,13 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <ul className="flex flex-col gap-0.5 p-2">
+              <ul className="flex flex-col gap-2 p-3">
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <Link
                       href={link.path}
                       onClick={() => setToggle(false)}
-                      className={`flex items-center px-3 py-2.5 rounded-xl border-l-4 text-sm transition duration-200 ${
+                      className={`flex items-center px-4 py-3 rounded-xl border-l-4 text-sm transition duration-200 ${
                         isActive(link.path)
                           ? "bg-white/10 border-brand-orange text-white font-semibold"
                           : "border-transparent text-white/80 hover:bg-white/10 hover:text-white"
@@ -208,31 +208,16 @@ const Navbar = () => {
                 ))}
               </ul>
 
-              <div className="px-3 pb-3 pt-2 border-t border-white/15 space-y-3">
+              <div className="px-3 pb-4 pt-2 border-t border-white/15">
                 <a
                   href={CONTACT.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#25D366] px-3 py-2.5 rounded-xl text-sm font-medium hover:brightness-95 transition"
+                  className="flex items-center justify-center gap-2 bg-[#25D366] px-3 py-3 rounded-xl text-sm font-medium hover:brightness-95 transition"
                 >
                   <WhatsAppIcon className="text-lg" />
                   Chat on WhatsApp
                 </a>
-
-                <div className="space-y-1.5 px-1 text-xs">
-                  <a
-                    href={`tel:+${CONTACT.phoneIntl}`}
-                    className="flex items-center gap-2 text-white/85 hover:text-white"
-                  >
-                    <Phone className="text-brand-orange shrink-0" size={14} /> {CONTACT.phone}
-                  </a>
-                  <a
-                    href={`mailto:${CONTACT.email}`}
-                    className="flex items-center gap-2 text-white/85 hover:text-white break-all"
-                  >
-                    <Mail className="text-brand-orange shrink-0" size={14} /> {CONTACT.email}
-                  </a>
-                </div>
               </div>
             </aside>
           </div>
