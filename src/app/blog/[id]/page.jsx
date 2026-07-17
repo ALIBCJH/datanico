@@ -44,7 +44,7 @@ export default function BlogPost({ params }) {
         </div>
         <Link
           href="/blogs"
-          className="mt-10 inline-block text-orange-600 font-semibold hover:underline"
+          className="mt-10 inline-block text-brand-orange-dark font-semibold hover:underline"
         >
           ← Back to Blog
         </Link>
@@ -57,7 +57,7 @@ export default function BlogPost({ params }) {
             <li key={p.id}>
               <Link
                 href={`/blog/${p.id}`}
-                className="text-lg font-medium text-orange-600 hover:underline"
+                className="text-lg font-medium text-brand-orange-dark hover:underline"
               >
                 {p.title}
               </Link>

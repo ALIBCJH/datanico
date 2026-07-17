@@ -70,7 +70,7 @@ const QuoteForm = () => {
   };
 
   const inputClass =
-    "mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500";
+    "mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange";
 
   return (
     <section id="get-quotation" className="bg-white px-4 pt-0 pb-16">
@@ -115,7 +115,7 @@ const QuoteForm = () => {
               name="insuranceCategory"
               required
               defaultValue=""
-              className="mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-orange"
             >
               <option value="" disabled>
                 What type of insurance are you interested in?
@@ -135,7 +135,7 @@ const QuoteForm = () => {
               id="consent"
               name="consent"
               type="checkbox"
-              className="h-4 w-4 mt-1 rounded border-gray-300 text-brand-orange focus:ring-orange-500"
+              className="h-4 w-4 mt-1 rounded border-gray-300 text-brand-orange focus:ring-brand-orange"
               required
             />
             <label htmlFor="consent" className="ml-2 text-sm text-gray-700 select-none">
@@ -146,7 +146,7 @@ const QuoteForm = () => {
 
           <button
             type="submit"
-            className="w-full bg-brand-orange hover:bg-[#e86500] text-white font-bold py-3 rounded-md transition duration-200 text-lg"
+            className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-3 rounded-md transition duration-200 text-lg"
           >
             Get a Quote
           </button>
@@ -154,7 +154,7 @@ const QuoteForm = () => {
       </div>
 
       {submitted && (
-        <div className="max-w-2xl mx-auto mt-8 p-6 rounded-lg border border-brand-orange bg-orange-50 text-brand-orange">
+        <div className="max-w-2xl mx-auto mt-8 p-6 rounded-lg border border-brand-orange bg-brand-orange-tint text-brand-orange">
           <p className="text-sm text-green-700 mb-4">
             {sending
               ? "Sending your request to our team…"

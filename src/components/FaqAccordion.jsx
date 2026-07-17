@@ -27,7 +27,7 @@ const FaqAccordion = () => {
             <button
               onClick={() => toggle(idx)}
               aria-expanded={openIndex === idx}
-              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-orange-100 transition"
+              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-brand-orange-muted transition"
             >
               <span className="text-lg font-semibold text-black">{faq.question}</span>
               <ChevronDown

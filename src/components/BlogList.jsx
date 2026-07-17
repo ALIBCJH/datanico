@@ -41,8 +41,8 @@ const BlogList = ({ variant = "full" }) => {
               className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 p-6 flex flex-col justify-between"
             >
               <div className="mb-5">
-                <div className="w-14 h-14 flex justify-center items-center rounded-full bg-orange-100 shadow-sm mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-orange-600" />
+                <div className="w-14 h-14 flex justify-center items-center rounded-full bg-brand-orange-muted shadow-sm mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-brand-orange-dark" />
                 </div>
 
                 <div className="flex justify-center items-center text-sm text-gray-500 gap-4 mb-2">
@@ -54,7 +54,7 @@ const BlogList = ({ variant = "full" }) => {
                   </span>
                 </div>
 
-                <CardHeading className="text-xl font-semibold text-black mb-3 hover:text-orange-600 transition text-center">
+                <CardHeading className="text-xl font-semibold text-black mb-3 hover:text-brand-orange-dark transition text-center">
                   <Link href={`/blog/${id}`}>{title}</Link>
                 </CardHeading>
 
@@ -63,7 +63,7 @@ const BlogList = ({ variant = "full" }) => {
 
               <Link
                 href={`/blog/${id}`}
-                className="text-orange-600 font-semibold text-sm hover:underline mx-auto"
+                className="text-brand-orange-dark font-semibold text-sm hover:underline mx-auto"
               >
                 Read More →
               </Link>
@@ -75,7 +75,7 @@ const BlogList = ({ variant = "full" }) => {
           <div className="text-center mt-12">
             <Link
               href="/blogs"
-              className="inline-block bg-[#FFE5D3] text-brand-orange font-medium px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
+              className="inline-block bg-brand-orange-soft text-brand-orange font-medium px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
             >
               View all articles →
             </Link>

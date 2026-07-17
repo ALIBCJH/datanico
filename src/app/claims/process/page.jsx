@@ -58,9 +58,9 @@ export default function RequirementClaimPage() {
       <div className="grid gap-6 sm:grid-cols-2 mt-20">
         <a
           href={`tel:+${CONTACT.phoneIntl}`}
-          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-orange-50 transition"
+          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-brand-orange-tint transition"
         >
-          <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
+          <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
             <Phone size={26} />
           </div>
           <div>
@@ -71,9 +71,9 @@ export default function RequirementClaimPage() {
 
         <a
           href={`mailto:${CONTACT.email}`}
-          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-orange-50 transition"
+          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-brand-orange-tint transition"
         >
-          <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
+          <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
             <Mail size={26} />
           </div>
           <div>
@@ -85,12 +85,12 @@ export default function RequirementClaimPage() {
 
       <div className="flex justify-center gap-4 mt-16 flex-wrap">
         <Link href="/faqs">
-          <button className="bg-brand-orange hover:bg-orange-700 text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
+          <button className="bg-brand-orange hover:bg-brand-orange-dark text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
             FAQs
           </button>
         </Link>
         <Link href="/claims/file">
-          <button className="bg-brand-orange hover:bg-orange-700 text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
+          <button className="bg-brand-orange hover:bg-brand-orange-dark text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
             File a Claim
           </button>
         </Link>

@@ -62,7 +62,7 @@ export default function ProductPage({ params }) {
           / <span className="text-gray-700">{title}</span>
         </nav>
 
-        <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 shadow-sm">
+        <div className="w-16 h-16 bg-brand-orange-muted rounded-full flex items-center justify-center mb-6 shadow-sm">
           <Icon className="w-8 h-8 text-brand-orange" />
         </div>
 
@@ -97,7 +97,7 @@ export default function ProductPage({ params }) {
           </Link>
           <a
             href={`tel:+${CONTACT.phoneIntl}`}
-            className="inline-flex items-center gap-2 border border-brand-orange text-brand-orange font-semibold px-8 py-3 rounded-xl hover:bg-orange-50 transition"
+            className="inline-flex items-center gap-2 border border-brand-orange text-brand-orange font-semibold px-8 py-3 rounded-xl hover:bg-brand-orange-tint transition"
           >
             <PhoneCall className="w-5 h-5" /> {CONTACT.phone}
           </a>
@@ -116,9 +116,9 @@ export default function ProductPage({ params }) {
               <Link
                 key={p.slug}
                 href={`/insurance/${p.slug}`}
-                className="flex items-center gap-3 border border-gray-200 rounded-xl p-4 hover:border-brand-orange hover:bg-orange-50 transition"
+                className="flex items-center gap-3 border border-gray-200 rounded-xl p-4 hover:border-brand-orange hover:bg-brand-orange-tint transition"
               >
-                <div className="bg-orange-100 text-brand-orange p-2 rounded-full">
+                <div className="bg-brand-orange-muted text-brand-orange p-2 rounded-full">
                   <p.icon className="w-5 h-5" />
                 </div>
                 <span className="font-medium text-gray-800">{p.title}</span>
