@@ -22,7 +22,11 @@ const CookieConsent = () => {
     <div className="fixed bottom-0 w-full bg-gray-900 text-white p-4 flex flex-col md:flex-row items-center justify-between gap-4 z-50">
       <p className="text-sm text-center md:text-left">
         We use cookies to ensure you get the best experience on our website. By continuing,
-        you agree to our use of cookies.
+        you agree to our use of cookies. Read our{" "}
+        <a href="/privacy" className="underline hover:text-brand-orange">
+          Privacy Policy
+        </a>
+        .
       </p>
       <div className="flex gap-3">
         <button

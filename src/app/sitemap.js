@@ -16,10 +16,12 @@ export default function sitemap() {
     "/insurance-tips",
     "/faqs",
     "/testimonial",
+    "/privacy",
+    "/terms",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.7,
+    priority: path === "" ? 1 : path === "/privacy" || path === "/terms" ? 0.3 : 0.7,
   }));
 
   const productPages = products.map((p) => ({
