@@ -18,7 +18,7 @@ const BlogList = ({ variant = "full" }) => {
 
   return (
     <section
-      className={`bg-white px-6 ${isPreview ? "py-16" : "pt-11 pb-24 min-h-screen"}`}
+      className={`bg-white px-6 ${isPreview ? "py-16" : "pt-11 pb-20"}`}
     >
       <div className="max-w-7xl mx-auto">
         <PageHeader

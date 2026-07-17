@@ -8,7 +8,7 @@ import Card from "@/components/ui/Card";
 
 const Products = () => {
   return (
-    <section className="min-h-screen bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto font-montserrat">
+    <section className="bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto font-montserrat">
       <PageHeader
         className="mb-12"
         title="Our Insurance Products"

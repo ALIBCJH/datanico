@@ -27,7 +27,7 @@ const steps = [
 const Claims = () => {
   return (
     <section id="claims" className="bg-white pt-11 pb-20 px-6 sm:px-10 font-montserrat">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <PageHeader as="h1" title="How Claims Work" className="mb-14" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

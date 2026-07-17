@@ -32,7 +32,7 @@ const claimSteps = [
 
 export default function RequirementClaimPage() {
   return (
-    <section className="min-h-screen bg-gray-50 px-6 pt-11 pb-20 max-w-6xl mx-auto font-montserrat">
+    <section className="bg-gray-50 px-6 pt-11 pb-20 max-w-6xl mx-auto font-montserrat">
       <PageHeader
         title="Claims Process"
         intro="Filing a claim doesn't have to be stressful. At Datani Insurance Agency, we guide you step-by-step to ensure your claim is handled quickly and fairly."

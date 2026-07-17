@@ -56,7 +56,7 @@ const tips = [
 
 export default function InsuranceTipsPage() {
   return (
-    <section className="bg-white pt-11 pb-24 px-6">
+    <section className="bg-white pt-11 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <PageHeader
           title="Smart Insurance Tips"

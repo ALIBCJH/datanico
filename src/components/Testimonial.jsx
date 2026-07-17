@@ -48,11 +48,11 @@ const TestimonialCard = ({ photo, name, role, text }) => (
 const Testimonials = () => {
   return (
     <section className="bg-white py-16 px-6 font-montserrat">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <div className="max-w-7xl mx-auto text-center mb-12">
         <PageHeader as="h2" title="What Our Clients Say" />
       </div>
 
-      <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
         {testimonials.map(({ id, photo, name, role, text }) => (
           <TestimonialCard key={id} photo={photo} name={name} role={role} text={text} />
         ))}
