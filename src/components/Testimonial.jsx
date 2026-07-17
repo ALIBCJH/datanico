@@ -49,19 +49,36 @@ const TestimonialCard = ({ photo, name, role, text }) => (
   </Card>
 );
 
-const Testimonials = () => {
+/**
+ * variant="full"    → the /testimonial page: badge + h1 + intro + CTA band.
+ * variant="preview" → homepage social-proof section: h2, the same cards, no CTA.
+ */
+const Testimonials = ({ variant = "full" }) => {
+  const isPreview = variant === "preview";
+
   return (
-    <section className="bg-gradient-to-b from-brand-orange-tint to-white pt-11 pb-20 px-5 sm:px-8 font-montserrat">
+    <section
+      className={`bg-gradient-to-b from-brand-orange-tint to-white px-5 sm:px-8 font-montserrat ${
+        isPreview ? "py-16" : "pt-11 pb-20"
+      }`}
+    >
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-block rounded-full bg-brand-orange-muted px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-orange-dark">
-            Testimonials
-          </span>
-          <h1 className="mt-4 text-3xl sm:text-5xl font-light text-black">What our clients say</h1>
+          {!isPreview && (
+            <span className="inline-block rounded-full bg-brand-orange-muted px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-orange-dark">
+              Testimonials
+            </span>
+          )}
+          {isPreview ? (
+            <h2 className="text-3xl sm:text-4xl font-light text-black">What our clients say</h2>
+          ) : (
+            <h1 className="mt-4 text-3xl sm:text-5xl font-light text-black">What our clients say</h1>
+          )}
           <p className="mt-3 text-base sm:text-lg text-gray-600">
-            Hear from the people and businesses we&apos;ve helped protect what matters most —
-            from farms and family health to small shops.
+            {isPreview
+              ? "Real words from the people and businesses we help protect across Kenya."
+              : "Hear from the people and businesses we've helped protect what matters most — from farms and family health to small shops."}
           </p>
         </div>
 
@@ -72,21 +89,23 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-14 rounded-2xl bg-white px-6 py-10 text-center shadow-sm ring-1 ring-gray-100">
-          <h2 className="text-2xl font-light text-black">Ready to protect what matters?</h2>
-          <p className="mx-auto mt-2 max-w-lg text-gray-600">
-            Join our clients across Kenya — get a free quote or talk to an advisor today.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Button href="/quote" variant="primary" size="lg">
-              Get a free quote
-            </Button>
-            <Button href="/contact" variant="outline" size="lg">
-              Talk to an advisor
-            </Button>
+        {/* CTA (full page only) */}
+        {!isPreview && (
+          <div className="mt-14 rounded-2xl bg-white px-6 py-10 text-center shadow-sm ring-1 ring-gray-100">
+            <h2 className="text-2xl font-light text-black">Ready to protect what matters?</h2>
+            <p className="mx-auto mt-2 max-w-lg text-gray-600">
+              Join our clients across Kenya — get a free quote or talk to an advisor today.
+            </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <Button href="/quote" variant="primary" size="lg">
+                Get a free quote
+              </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                Talk to an advisor
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
