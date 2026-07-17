@@ -12,7 +12,7 @@ const FaqAccordion = () => {
   const toggle = (idx) => setOpenIndex(openIndex === idx ? null : idx);
 
   return (
-    <section className="min-h-screen pt-11 pb-20 px-6 max-w-4xl mx-auto">
+    <section className="pt-11 pb-20 px-6 max-w-4xl mx-auto">
       <PageHeader
         title="Frequently Asked Questions"
         intro="Answers to common questions about claims at Datani Insurance Agency."
