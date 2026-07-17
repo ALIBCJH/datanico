@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Field, { inputClass } from "@/components/ui/Field";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
 
 const categoryOffers = {
   life: [
@@ -69,54 +72,26 @@ const QuoteForm = () => {
     }
   };
 
-  const inputClass =
-    "mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange";
-
   return (
     <section id="get-quotation" className="bg-white px-4 pt-0 pb-16">
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-xl p-6 sm:p-10">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-orange">
-            Get a Quote in Minutes
-          </h1>
-          <p className="mt-2 text-base sm:text-lg text-gray-600 font-medium">
-            Let&apos;s get you started
-          </p>
-        </div>
+        <PageHeader title="Get a Quote in Minutes" intro="Let's get you started" className="mb-8" />
 
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="fullName" className="block text-sm font-semibold text-gray-700">
-              Full Name <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Full Name" htmlFor="fullName" required>
             <input id="fullName" name="fullName" type="text" placeholder="Full Name" required className={inputClass} />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-semibold text-gray-700">
-              Email
-            </label>
+          <Field label="Email" htmlFor="email">
             <input id="email" name="email" type="email" placeholder="Email" className={inputClass} />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="phone" className="block text-sm font-semibold text-gray-700">
-              Phone <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Phone" htmlFor="phone" required>
             <input id="phone" name="phone" type="tel" placeholder="Phone" required className={inputClass} />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="insuranceCategory" className="block text-sm font-semibold text-gray-700">
-              Insurance Category <span className="text-brand-orange">*</span>
-            </label>
-            <select
-              id="insuranceCategory"
-              name="insuranceCategory"
-              required
-              defaultValue=""
-              className="mt-1 w-full rounded-md border border-brand-orange px-4 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-            >
+          <Field label="Insurance Category" htmlFor="insuranceCategory" required>
+            <select id="insuranceCategory" name="insuranceCategory" required defaultValue="" className={inputClass}>
               <option value="" disabled>
                 What type of insurance are you interested in?
               </option>
@@ -128,7 +103,7 @@ const QuoteForm = () => {
               <option value="travel">Travel Insurance</option>
               <option value="business">Business Insurance</option>
             </select>
-          </div>
+          </Field>
 
           <div className="flex items-start">
             <input
@@ -144,18 +119,19 @@ const QuoteForm = () => {
             </label>
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-3 rounded-md transition duration-200 text-lg"
-          >
-            Get a Quote
-          </button>
+          <Button type="submit" variant="primary" size="lg" className="w-full" disabled={sending}>
+            {sending ? "Sending…" : "Get a Quote"}
+          </Button>
         </form>
       </div>
 
       {submitted && (
-        <div className="max-w-2xl mx-auto mt-8 p-6 rounded-lg border border-brand-orange bg-brand-orange-tint text-brand-orange">
-          <p className="text-sm text-green-700 mb-4">
+        <div
+          role="status"
+          aria-live="polite"
+          className="max-w-2xl mx-auto mt-8 p-6 rounded-lg border border-brand-orange bg-brand-orange-tint text-brand-orange-dark"
+        >
+          <p className="text-sm font-medium mb-4">
             {sending
               ? "Sending your request to our team…"
               : "✅ Your request has been received — an agent will be in touch shortly."}

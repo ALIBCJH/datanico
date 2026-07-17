@@ -1,5 +1,7 @@
-import Link from "next/link";
 import { FaClipboardList, FaRegFileAlt, FaCheckCircle } from "react-icons/fa";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 const steps = [
   {
@@ -26,27 +28,29 @@ const Claims = () => {
   return (
     <section id="claims" className="bg-white pt-11 pb-20 px-6 sm:px-10 font-montserrat">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-light text-black mb-14">How Claims Work</h1>
+        <PageHeader as="h1" title="How Claims Work" className="mb-14" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {steps.map((step) => (
-            <div
+            <Card
               key={step.title}
-              className="bg-gray-100 p-10 rounded-2xl shadow-md hover:shadow-lg transition text-center"
+              className="p-10 hover:shadow-lg transition text-center"
             >
               <div className="flex justify-center items-center mb-6">{step.icon}</div>
               <h2 className="text-2xl font-light mb-3 text-black">{step.title}</h2>
               <p className="text-gray-600 text-base">{step.description}</p>
-            </div>
+            </Card>
           ))}
         </div>
 
-        <Link
+        <Button
           href="/claims/file"
-          className="inline-block mt-12 bg-brand-orange text-white py-3 px-10 rounded-full text-lg font-medium hover:brightness-95 transition"
+          variant="primary"
+          size="lg"
+          className="mt-12"
         >
           File a Claim →
-        </Link>
+        </Button>
       </div>
     </section>
   );

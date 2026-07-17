@@ -1,4 +1,6 @@
 import { HeartPulse, Car, Home, User, Plane, Lock, ShieldCheck } from "lucide-react";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 export const metadata = {
   title: "Smart Insurance Tips",
@@ -56,19 +58,17 @@ export default function InsuranceTipsPage() {
   return (
     <section className="bg-white pt-11 pb-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-black mb-6 text-center">
-          Smart Insurance Tips
-        </h1>
-        <p className="text-gray-600 text-lg max-w-3xl text-center mx-auto mb-16">
-          Empower your financial future by making informed decisions. These simple yet
-          powerful tips help you get the most out of your coverage.
-        </p>
+        <PageHeader
+          title="Smart Insurance Tips"
+          intro="Empower your financial future by making informed decisions. These simple yet powerful tips help you get the most out of your coverage."
+          className="mb-16"
+        />
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {tips.map(({ title, description, icon: Icon }) => (
-            <div
+            <Card
               key={title}
-              className="bg-white border border-gray-200 rounded-3xl shadow-md p-6 transition duration-300 hover:shadow-lg"
+              className="p-6 shadow-md transition duration-300 hover:shadow-lg"
             >
               <div className="bg-brand-orange-muted w-14 h-14 flex items-center justify-center rounded-full mb-4 mx-auto">
                 <Icon className="w-6 h-6 text-brand-orange-dark" />
@@ -77,7 +77,7 @@ export default function InsuranceTipsPage() {
               <p className="text-gray-700 leading-relaxed text-sm text-center">
                 {description}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

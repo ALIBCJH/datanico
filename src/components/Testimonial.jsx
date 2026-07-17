@@ -2,6 +2,8 @@ import Image from "next/image";
 import person1 from "@/assets/person1.jpg";
 import person2 from "@/assets/person2.jpg";
 import person3 from "@/assets/person3.jpg";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 const testimonials = [
   {
@@ -28,7 +30,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ photo, name, role, text }) => (
-  <div className="bg-white shadow-md rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-4 border border-gray-100 hover:shadow-lg transition duration-300">
+  <Card className="p-6 flex flex-col md:flex-row items-center md:items-start gap-4 hover:shadow-lg transition duration-300">
     <Image
       src={photo}
       alt={`${name}`}
@@ -40,14 +42,14 @@ const TestimonialCard = ({ photo, name, role, text }) => (
       <h3 className="text-xl font-semibold text-black">{name}</h3>
       <p className="text-sm text-gray-500">{role}</p>
     </div>
-  </div>
+  </Card>
 );
 
 const Testimonials = () => {
   return (
     <section className="bg-white py-16 px-6 font-montserrat">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h1 className="text-3xl font-light text-black mb-6">What Our Clients Say</h1>
+        <PageHeader as="h2" title="What Our Clients Say" />
       </div>
 
       <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { faqs } from "@/data/faqs";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 const FaqAccordion = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -11,23 +13,19 @@ const FaqAccordion = () => {
 
   return (
     <section className="min-h-screen pt-11 pb-20 px-6 max-w-4xl mx-auto">
-      <h1 className="text-5xl font-light text-center text-black mb-6">
-        Frequently Asked Questions
-      </h1>
-      <p className="text-gray-600 text-center mb-12 text-lg">
-        Answers to common questions about claims at Datani Insurance Agency.
-      </p>
+      <PageHeader
+        title="Frequently Asked Questions"
+        intro="Answers to common questions about claims at Datani Insurance Agency."
+        className="mb-12"
+      />
 
       <div className="space-y-4">
         {faqs.map((faq, idx) => (
-          <div
-            key={idx}
-            className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm"
-          >
+          <Card key={idx} className="overflow-hidden">
             <button
               onClick={() => toggle(idx)}
               aria-expanded={openIndex === idx}
-              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-brand-orange-muted transition"
+              className="w-full flex justify-between items-center px-6 py-4 text-left hover:bg-brand-orange-muted transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
             >
               <span className="text-lg font-semibold text-black">{faq.question}</span>
               <ChevronDown
@@ -42,7 +40,7 @@ const FaqAccordion = () => {
                 {faq.answer}
               </div>
             )}
-          </div>
+          </Card>
         ))}
       </div>
     </section>
