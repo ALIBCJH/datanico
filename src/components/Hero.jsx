@@ -34,9 +34,9 @@ const Hero = () => {
       {/* Soft fade so the banner melts into the page instead of ending on a hard edge. */}
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 sm:h-10 md:h-16 bg-gradient-to-b from-transparent to-white z-10" />
 
-      <div className="absolute top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
+      <div className="absolute top-[85%] sm:top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
         <Link href="/quote">
-          <button className="bg-brand-purple sm:bg-brand-orange rounded-lg sm:rounded-none text-white text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 md:px-12 py-2 sm:py-3 shadow-md hover:brightness-95 hover:scale-105 transition-transform duration-300 max-w-fit">
+          <button className="bg-brand-purple sm:bg-brand-orange rounded-lg sm:rounded-none text-white text-base sm:text-base md:text-lg font-semibold px-8 sm:px-6 md:px-12 py-3 sm:py-3 shadow-md hover:brightness-95 hover:scale-105 transition-transform duration-300 max-w-fit">
             Get Your Quote
           </button>
         </Link>
