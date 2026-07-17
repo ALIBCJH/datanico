@@ -5,6 +5,7 @@ import { BadgeCheck, ShieldCheck, PhoneCall, CheckCircle2 } from "lucide-react";
 import { CONTACT } from "@/data/constants";
 import Field, { inputClass } from "@/components/ui/Field";
 import Button from "@/components/ui/Button";
+import Honeypot from "@/components/ui/Honeypot";
 
 const CATEGORIES = [
   { value: "general", label: "General Insurance" },
@@ -29,6 +30,7 @@ const QuoteForm = () => {
     phone: "",
     category: "",
     consent: false,
+    company: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -56,6 +58,7 @@ const QuoteForm = () => {
           phone: formData.phone,
           email: formData.email,
           message: `Quote request — Insurance category: ${categoryLabel}`,
+          company: formData.company,
           source: "Quote form",
         }),
       });
@@ -131,6 +134,7 @@ const QuoteForm = () => {
             </div>
           ) : (
             <form className="space-y-5" onSubmit={handleSubmit}>
+              <Honeypot value={formData.company} onChange={handleChange} />
               <Field label="Full name" htmlFor="name" required>
                 <input
                   id="name"

@@ -7,9 +7,10 @@ import { CONTACT } from "@/data/constants";
 import Field, { inputClass } from "@/components/ui/Field";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import Honeypot from "@/components/ui/Honeypot";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "", company: "" });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,7 @@ const Contact = () => {
 
       if (res.ok && data.success) {
         setSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "", company: "" });
       } else {
         setError(data.error || "Failed to send message. Please try again.");
       }
@@ -131,6 +132,7 @@ const Contact = () => {
             </p>
 
             <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
+              <Honeypot value={formData.company} onChange={handleChange} />
               <Field label="Name" htmlFor="name" required>
                 <input
                   id="name"
