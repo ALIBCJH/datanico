@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaClock, FaWhatsapp } from "react-icons/fa";
 import { CONTACT } from "@/data/constants";
+import Field, { inputClass } from "@/components/ui/Field";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -41,24 +44,20 @@ const Contact = () => {
     }
   };
 
-  const inputClass =
-    "mt-1 block w-full border border-gray-300 bg-white rounded-md px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-orange";
-
   return (
     <section className="bg-white pt-11 pb-20 px-6 sm:px-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         <div className="bg-white rounded-xl shadow-md p-8">
-          <h1 className="text-4xl font-light text-black mb-4">Get in Touch</h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Have a question or want to work with us? Fill out the form and we&apos;ll
-            respond shortly.
-          </p>
+          <PageHeader
+            as="h1"
+            align="left"
+            title="Get in Touch"
+            intro="Have a question or want to work with us? Fill out the form and we'll respond shortly."
+            className="mb-6"
+          />
 
           <form className="space-y-5" onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name" className="block text-sm text-gray-700 font-medium">
-                Name <span className="text-brand-orange">*</span>
-              </label>
+            <Field label="Name" htmlFor="name" required>
               <input
                 id="name"
                 type="text"
@@ -69,12 +68,9 @@ const Contact = () => {
                 onChange={handleChange}
                 className={inputClass}
               />
-            </div>
+            </Field>
 
-            <div>
-              <label htmlFor="email" className="block text-sm text-gray-700 font-medium">
-                Email
-              </label>
+            <Field label="Email" htmlFor="email">
               <input
                 id="email"
                 type="email"
@@ -84,12 +80,9 @@ const Contact = () => {
                 onChange={handleChange}
                 className={inputClass}
               />
-            </div>
+            </Field>
 
-            <div>
-              <label htmlFor="phone" className="block text-sm text-gray-700 font-medium">
-                Phone <span className="text-brand-orange">*</span>
-              </label>
+            <Field label="Phone" htmlFor="phone" required>
               <input
                 id="phone"
                 type="tel"
@@ -100,12 +93,9 @@ const Contact = () => {
                 onChange={handleChange}
                 className={inputClass}
               />
-            </div>
+            </Field>
 
-            <div>
-              <label htmlFor="message" className="block text-sm text-gray-700 font-medium">
-                Message <span className="text-brand-orange">*</span>
-              </label>
+            <Field label="Message" htmlFor="message" required>
               <textarea
                 id="message"
                 name="message"
@@ -116,27 +106,25 @@ const Contact = () => {
                 onChange={handleChange}
                 className={inputClass}
               />
-            </div>
+            </Field>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className={`w-full py-3 rounded-md text-lg font-medium transition duration-300 ${
-                loading
-                  ? "bg-gray-400 text-white cursor-not-allowed"
-                  : "bg-brand-orange-soft text-brand-orange hover:bg-brand-orange hover:text-white"
-              }`}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+            <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
+              {loading ? "Sending…" : "Send Message"}
+            </Button>
           </form>
 
-          {submitted && (
-            <div className="mt-4 text-green-600 text-sm">
-              ✅ Thank you! Your message has been sent.
-            </div>
-          )}
-          {error && <div className="mt-4 text-red-600 text-sm">⚠️ {error}</div>}
+          <div aria-live="polite">
+            {submitted && (
+              <div role="status" className="mt-4 text-green-600 text-sm">
+                ✅ Thank you! Your message has been sent.
+              </div>
+            )}
+            {error && (
+              <div role="alert" className="mt-4 text-red-600 text-sm">
+                ⚠️ {error}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-8 flex flex-col justify-center text-left space-y-6">

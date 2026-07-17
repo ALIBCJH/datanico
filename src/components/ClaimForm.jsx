@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Field, { inputClass } from "@/components/ui/Field";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
 
 const CLAIM_TYPES = [
   { value: "general", label: "General Insurance" },
@@ -81,24 +84,17 @@ const ClaimForm = () => {
     }
   };
 
-  const inputClass =
-    "mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-orange";
-
   return (
     <section id="claim-form" className="bg-gray-50 pt-11 pb-20 px-4 font-montserrat">
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-10 sm:p-12">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-light text-black">Make a Claim</h1>
-          <p className="mt-2 text-base sm:text-lg text-gray-600">
-            Submit your claim request below and we&apos;ll take care of the rest.
-          </p>
-        </div>
+        <PageHeader
+          title="Make a Claim"
+          intro="Submit your claim request below and we'll take care of the rest."
+          className="mb-10"
+        />
 
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              Full Name <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Full Name" htmlFor="name" required>
             <input
               id="name"
               name="name"
@@ -109,12 +105,9 @@ const ClaimForm = () => {
               onChange={handleChange}
               className={inputClass}
             />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
+          <Field label="Email" htmlFor="email">
             <input
               id="email"
               name="email"
@@ -124,12 +117,9 @@ const ClaimForm = () => {
               onChange={handleChange}
               className={inputClass}
             />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-              Phone <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Phone" htmlFor="phone" required>
             <input
               id="phone"
               name="phone"
@@ -140,12 +130,9 @@ const ClaimForm = () => {
               onChange={handleChange}
               className={inputClass}
             />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="policyNumber" className="block text-sm font-medium text-gray-700">
-              Policy Number <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Policy Number" htmlFor="policyNumber" required>
             <input
               id="policyNumber"
               name="policyNumber"
@@ -156,12 +143,9 @@ const ClaimForm = () => {
               onChange={handleChange}
               className={inputClass}
             />
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="claimType" className="block text-sm font-medium text-gray-700">
-              Claim Type <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Claim Type" htmlFor="claimType" required>
             <select
               id="claimType"
               name="claimType"
@@ -179,12 +163,9 @@ const ClaimForm = () => {
                 </option>
               ))}
             </select>
-          </div>
+          </Field>
 
-          <div>
-            <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-              Claim Description <span className="text-brand-orange">*</span>
-            </label>
+          <Field label="Claim Description" htmlFor="description" required>
             <textarea
               id="description"
               name="description"
@@ -195,19 +176,11 @@ const ClaimForm = () => {
               onChange={handleChange}
               className={inputClass}
             />
-          </div>
+          </Field>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full font-semibold py-3 rounded-lg shadow-md transition duration-200 text-base ${
-              loading
-                ? "bg-gray-400 text-white cursor-not-allowed"
-                : "bg-brand-orange hover:brightness-95 text-white"
-            }`}
-          >
-            {loading ? "Submitting..." : "Submit Claim"}
-          </button>
+          <Button type="submit" variant="primary" size="lg" className="w-full" disabled={loading}>
+            {loading ? "Submitting…" : "Submit Claim"}
+          </Button>
         </form>
 
         <div aria-live="polite">

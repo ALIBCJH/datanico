@@ -4,6 +4,8 @@ import { Check, PhoneCall, Mail } from "lucide-react";
 import { products, getProductBySlug } from "@/data/products";
 import { CONTACT } from "@/data/constants";
 import JsonLd from "@/components/JsonLd";
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://datani.co.ke";
 
@@ -89,40 +91,32 @@ export default function ProductPage({ params }) {
         <p className="text-lg text-gray-700 leading-relaxed">{whoFor}</p>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <Link
-            href="/quote"
-            className="bg-brand-orange text-white font-semibold px-8 py-3 rounded-xl hover:brightness-95 transition"
-          >
+          <Button href="/quote" variant="primary" size="lg">
             Get a Quote
-          </Link>
-          <a
-            href={`tel:+${CONTACT.phoneIntl}`}
-            className="inline-flex items-center gap-2 border border-brand-orange text-brand-orange font-semibold px-8 py-3 rounded-xl hover:bg-brand-orange-tint transition"
-          >
+          </Button>
+          <Button href={`tel:+${CONTACT.phoneIntl}`} variant="outline" size="lg">
             <PhoneCall className="w-5 h-5" /> {CONTACT.phone}
-          </a>
-          <a
-            href={`mailto:${CONTACT.email}`}
-            className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-xl hover:bg-gray-50 transition"
-          >
+          </Button>
+          <Button href={`mailto:${CONTACT.email}`} variant="neutral" size="lg">
             <Mail className="w-5 h-5" /> Email us
-          </a>
+          </Button>
         </div>
 
         <div className="mt-16 pt-10 border-t border-gray-200">
           <h2 className="text-2xl font-semibold text-black mb-6">Other cover you may need</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {related.map((p) => (
-              <Link
+              <Card
+                as={Link}
                 key={p.slug}
                 href={`/insurance/${p.slug}`}
-                className="flex items-center gap-3 border border-gray-200 rounded-xl p-4 hover:border-brand-orange hover:bg-brand-orange-tint transition"
+                className="flex items-center gap-3 p-4 hover:border-brand-orange hover:bg-brand-orange-tint transition"
               >
                 <div className="bg-brand-orange-muted text-brand-orange p-2 rounded-full">
                   <p.icon className="w-5 h-5" />
                 </div>
                 <span className="font-medium text-gray-800">{p.title}</span>
-              </Link>
+              </Card>
             ))}
           </div>
         </div>

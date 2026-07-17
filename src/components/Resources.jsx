@@ -1,5 +1,7 @@
-import Link from "next/link";
 import { Newspaper, Lightbulb, HelpCircle } from "lucide-react";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 const resources = [
   {
@@ -28,13 +30,13 @@ const Resources = () => {
   return (
     <section id="resources" className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-5xl font-light text-black mb-14">Resources</h2>
+        <PageHeader as="h2" title="Resources" className="mb-14" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {resources.map(({ icon, title, description, link }) => (
-            <div
+            <Card
               key={title}
-              className="bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-lg hover:bg-brand-orange-tint transition duration-300 flex flex-col justify-between text-center"
+              className="p-8 shadow-md hover:shadow-lg hover:bg-brand-orange-tint transition duration-300 flex flex-col justify-between text-center"
             >
               <div>
                 <div className="flex justify-center items-center mb-4">{icon}</div>
@@ -42,14 +44,14 @@ const Resources = () => {
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">{description}</p>
               </div>
 
-              <Link
+              <Button
                 href={link}
+                variant="soft"
                 aria-label={`Explore ${title}`}
-                className="inline-block bg-brand-orange-soft text-brand-orange font-medium text-base px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
               >
                 Explore
-              </Link>
-            </div>
+              </Button>
+            </Card>
           ))}
         </div>
       </div>

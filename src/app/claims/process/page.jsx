@@ -1,6 +1,8 @@
-import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
 import { CONTACT } from "@/data/constants";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 export const metadata = {
   title: "Claims Process & Requirements",
@@ -31,19 +33,17 @@ const claimSteps = [
 export default function RequirementClaimPage() {
   return (
     <section className="min-h-screen bg-gray-50 px-6 pt-11 pb-20 max-w-6xl mx-auto font-montserrat">
-      <h1 className="text-4xl sm:text-5xl font-light text-gray-800 mb-6 text-center">
-        Claims Process
-      </h1>
-      <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
-        Filing a claim doesn&apos;t have to be stressful. At Datani Insurance Agency, we
-        guide you step-by-step to ensure your claim is handled quickly and fairly.
-      </p>
+      <PageHeader
+        title="Claims Process"
+        intro="Filing a claim doesn't have to be stressful. At Datani Insurance Agency, we guide you step-by-step to ensure your claim is handled quickly and fairly."
+        className="mb-12"
+      />
 
       <div className="grid gap-8 md:grid-cols-2">
         {claimSteps.map(({ title, content }) => (
-          <div
+          <Card
             key={title}
-            className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-200"
+            className="p-6 hover:shadow-md transition duration-200"
           >
             <h2 className="text-xl sm:text-2xl font-semibold text-brand-orange mb-3">
               {title}
@@ -51,14 +51,15 @@ export default function RequirementClaimPage() {
             <p className="text-gray-700 whitespace-pre-line text-base leading-relaxed">
               {content}
             </p>
-          </div>
+          </Card>
         ))}
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 mt-20">
-        <a
+        <Card
+          as="a"
           href={`tel:+${CONTACT.phoneIntl}`}
-          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-brand-orange-tint transition"
+          className="p-6 flex items-start gap-4 hover:bg-brand-orange-tint transition"
         >
           <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
             <Phone size={26} />
@@ -67,11 +68,12 @@ export default function RequirementClaimPage() {
             <h3 className="text-lg font-semibold text-gray-800 mb-1">Call Our Hotline</h3>
             <p className="text-gray-600 text-base">{CONTACT.phone}</p>
           </div>
-        </a>
+        </Card>
 
-        <a
+        <Card
+          as="a"
           href={`mailto:${CONTACT.email}`}
-          className="bg-white border border-gray-200 rounded-xl p-6 flex items-start gap-4 shadow-sm hover:bg-brand-orange-tint transition"
+          className="p-6 flex items-start gap-4 hover:bg-brand-orange-tint transition"
         >
           <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
             <Mail size={26} />
@@ -80,20 +82,16 @@ export default function RequirementClaimPage() {
             <h3 className="text-lg font-semibold text-gray-800 mb-1">Email Our Team</h3>
             <p className="text-gray-600 text-base">{CONTACT.email}</p>
           </div>
-        </a>
+        </Card>
       </div>
 
       <div className="flex justify-center gap-4 mt-16 flex-wrap">
-        <Link href="/faqs">
-          <button className="bg-brand-orange hover:bg-brand-orange-dark text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
-            FAQs
-          </button>
-        </Link>
-        <Link href="/claims/file">
-          <button className="bg-brand-orange hover:bg-brand-orange-dark text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
-            File a Claim
-          </button>
-        </Link>
+        <Button href="/faqs" variant="outline">
+          FAQs
+        </Button>
+        <Button href="/claims/file" variant="primary">
+          File a Claim
+        </Button>
       </div>
     </section>
   );

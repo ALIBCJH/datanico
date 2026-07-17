@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { CalendarDays, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
+import Button from "@/components/ui/Button";
+import PageHeader from "@/components/ui/PageHeader";
+import Card from "@/components/ui/Card";
 
 /**
  * variant="full"    → the canonical /blogs index: <h1>, intro, every post.
@@ -18,27 +21,23 @@ const BlogList = ({ variant = "full" }) => {
       className={`bg-white px-6 ${isPreview ? "py-16" : "pt-11 pb-24 min-h-screen"}`}
     >
       <div className="max-w-7xl mx-auto">
-        {isPreview ? (
-          <h2 className="text-4xl font-light text-black mb-12 text-center">
-            Latest from our blog
-          </h2>
-        ) : (
-          <>
-            <h1 className="text-5xl font-light text-black mb-12 text-center">
-              Our Insurance Blog
-            </h1>
-            <p className="text-gray-600 text-lg max-w-3xl text-center mx-auto mb-16">
-              Discover expert insights, practical advice, and the latest updates in the
-              world of insurance. We cover life, health, travel, business, and more.
-            </p>
-          </>
-        )}
+        <PageHeader
+          as={isPreview ? "h2" : "h1"}
+          title={isPreview ? "Latest from our blog" : "Our Insurance Blog"}
+          intro={
+            isPreview
+              ? undefined
+              : "Discover expert insights, practical advice, and the latest updates in the world of insurance. We cover life, health, travel, business, and more."
+          }
+          className="mb-16"
+        />
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {posts.map(({ id, title, date, summary, readTime, icon: Icon }) => (
-            <article
+            <Card
+              as="article"
               key={id}
-              className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 p-6 flex flex-col justify-between"
+              className="p-6 flex flex-col justify-between hover:shadow-md transition"
             >
               <div className="mb-5">
                 <div className="w-14 h-14 flex justify-center items-center rounded-full bg-brand-orange-muted shadow-sm mx-auto mb-4">
@@ -67,18 +66,15 @@ const BlogList = ({ variant = "full" }) => {
               >
                 Read More →
               </Link>
-            </article>
+            </Card>
           ))}
         </div>
 
         {isPreview && (
           <div className="text-center mt-12">
-            <Link
-              href="/blogs"
-              className="inline-block bg-brand-orange-soft text-brand-orange font-medium px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
-            >
+            <Button href="/blogs" variant="soft" size="sm">
               View all articles →
-            </Link>
+            </Button>
           </div>
         )}
       </div>
