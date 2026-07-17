@@ -18,12 +18,40 @@ import { navLinks, CONTACT } from "@/data/constants";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  // Which in-page section is currently in view (e.g. "home", "about").
+  const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
 
   const isActive = (path) => {
-    const base = path.split("#")[0] || "/";
-    return pathname === base;
+    const [rawBase, hash] = path.split("#");
+    const base = rawBase || "/";
+    if (pathname !== base) return false;
+    // Same page. For in-page anchor links (/#home, /#about) only the section
+    // currently in view is active, so Home and About don't light up together.
+    if (hash) return activeSection === hash;
+    return true;
   };
+
+  // Scroll-spy: on the homepage, track which anchor section is in view so the
+  // matching nav link is highlighted (Home at the top, About lower down, etc.).
+  useEffect(() => {
+    if (pathname !== "/") return;
+    const ids = navLinks
+      .filter((l) => l.path.startsWith("/#"))
+      .map((l) => l.path.split("#")[1]);
+    const onScroll = () => {
+      const y = window.scrollY + 120; // offset for the sticky navbar
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= y) current = id;
+      }
+      setActiveSection(current);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
   // Close the mobile drawer on Escape and lock body scroll while it's open.
   useEffect(() => {
