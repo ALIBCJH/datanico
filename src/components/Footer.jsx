@@ -1,90 +1,74 @@
-import { FaFacebookF, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { CONTACT } from "@/data/constants";
+
+const year = 2025;
+
+const products = [
+  "Motor Insurance",
+  "Medical Insurance",
+  "Property Insurance",
+  "Marine & Goods in Transit",
+  "Liability Insurance",
+  "Life Assurance",
+  "Retirement & Pension Plan",
+  "Investment Plans",
+];
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Our Products", href: "/products" },
+  { label: "Claims", href: "/claims" },
+  { label: "Contact", href: "/contact" },
+];
 
 const Footer = () => {
-  const year = new Date().getFullYear();
-
   return (
-    <footer
-      className="bg-[#352969] text-white pt-11 pb-10"
-      style={{ fontFamily: "Montserrat, sans-serif" }}
-    >
+    <footer className="bg-brand-deep text-white pt-11 pb-10 font-montserrat">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
-            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
-              Head Office
-            </h4>
+            <h3 className="font-bold text-brand-orange mb-4">Head Office</h3>
             <p>Mawaidha House, Ground Floor</p>
             <p>Kimathi Street</p>
             <p>P.O. Box 492 - 10100 Nyeri</p>
-            <p>Tel: 0714 046 604</p>
-            <p>Email: info@datani.co.ke</p>
+            <p>Tel: {CONTACT.phone}</p>
+            <p>Email: {CONTACT.email}</p>
           </div>
 
           <div>
-            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">Products</h4>
+            <h3 className="font-bold text-brand-orange mb-4">Products</h3>
             <ul className="space-y-2">
-              <li>Motor Insurance</li>
-              <li>Medical Insurance</li>
-              <li>Property Insurance</li>
-              <li>Marine & Goods in Transit</li>
-              <li>Liability Insurance</li>
-              <li>Life Assurance</li>
-              <li>Retirement & Pension Plan</li>
-              <li>Investment Plans</li>
+              {products.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
-              Quick Links
-            </h4>
+            <h3 className="font-bold text-brand-orange mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="hover:text-[#FF770F] transition">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-[#FF770F] transition">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="hover:text-[#FF770F] transition"
-                >
-                  Our Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/claims" className="hover:text-[#FF770F] transition">
-                  Claims
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-[#FF770F] transition">
-                  Contact
-                </Link>
-              </li>
+              {quickLinks.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="hover:text-brand-orange transition">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-1xl font-bold text-[#FF770F] mb-4">
-              Business Hours
-            </h4>
+            <h3 className="font-bold text-brand-orange mb-4">Business Hours</h3>
             <ul className="space-y-2">
               <li>Mon – Fri: 8:00 AM – 5:00 PM</li>
               <li>Saturday: 9:00 AM – 1:00 PM</li>
-              <li>Sunday & Holidays: Closed</li>
+              <li>Sunday &amp; Holidays: Closed</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 text-center text-1xl text-white/80">
+        <div className="border-t border-white/20 pt-6 text-center text-white/80">
           <p>© {year} Datani Insurance Agency. All rights reserved.</p>
         </div>
       </div>

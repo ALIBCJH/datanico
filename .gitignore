@@ -1,10 +1,9 @@
-node_modules/
-dist/
-build/
+/node_modules
+/.next
+/out
+/build
 .env
+.env*.local
+npm-debug.log*
 .DS_Store
-.vscode/
-*.log
-coverage/
-Backend/
-
+optimize_images.py
