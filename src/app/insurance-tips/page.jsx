@@ -1,6 +1,15 @@
-import { HeartPulse, Car, Home, User, Plane, Lock, ShieldCheck } from "lucide-react";
+import {
+  CalendarCheck,
+  Layers,
+  FileText,
+  Calculator,
+  Contact,
+  FolderArchive,
+  Plane,
+} from "lucide-react";
 import PageHeader from "@/components/ui/PageHeader";
 import Card from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
 
 export const metadata = {
   title: "Smart Insurance Tips",
@@ -13,43 +22,43 @@ const tips = [
   {
     title: "Review Policies Annually",
     description:
-      "Always review your insurance policies every year to ensure they still align with your life changes, like a new job, home, or family situation.",
-    icon: ShieldCheck,
+      "Review your policies every year so they still match your life — a new job, home, car or family situation.",
+    icon: CalendarCheck,
   },
   {
     title: "Bundle to Save",
     description:
-      "Combining home, auto, and life insurance with the same provider can earn you significant discounts and simplify your payments.",
-    icon: Home,
+      "Combining home, motor and life cover with the same provider can earn real discounts and simplify your payments.",
+    icon: Layers,
   },
   {
     title: "Understand the Fine Print",
     description:
-      "Carefully read the terms and exclusions of your policy. Knowing what's not covered prevents disappointment when you need to make a claim.",
-    icon: Lock,
+      "Read the terms and exclusions. Knowing what isn't covered prevents nasty surprises when you make a claim.",
+    icon: FileText,
   },
   {
     title: "Set the Right Coverage Amount",
     description:
-      "Avoid underinsurance by calculating how much coverage you really need based on your assets, lifestyle, and liabilities.",
-    icon: User,
+      "Avoid underinsurance — work out how much cover you actually need based on your assets, lifestyle and liabilities.",
+    icon: Calculator,
   },
   {
-    title: "Keep Emergency Contacts Updated",
+    title: "Keep Contacts Updated",
     description:
-      "Ensure your beneficiaries, emergency contacts, and insurer have accurate details in case of claims or inquiries.",
-    icon: HeartPulse,
+      "Make sure your beneficiaries, emergency contacts and insurer all have accurate details for claims and enquiries.",
+    icon: Contact,
   },
   {
     title: "Document Everything",
     description:
-      "Store copies of your insurance policies, receipts, and claim forms digitally and physically. This simplifies the process during emergencies.",
-    icon: Car,
+      "Keep copies of policies, receipts and claim forms — digital and physical. It speeds things up in an emergency.",
+    icon: FolderArchive,
   },
   {
     title: "Buy Travel Insurance Early",
     description:
-      "Purchase your travel insurance immediately after booking to ensure trip cancellation and medical benefits kick in from day one.",
+      "Buy travel cover right after booking so trip-cancellation and medical benefits apply from day one.",
     icon: Plane,
   },
 ];
@@ -60,25 +69,44 @@ export default function InsuranceTipsPage() {
       <div className="max-w-7xl mx-auto">
         <PageHeader
           title="Smart Insurance Tips"
-          intro="Empower your financial future by making informed decisions. These simple yet powerful tips help you get the most out of your coverage."
-          className="mb-16"
+          intro="Simple, practical advice to help you get the most out of your cover — and avoid the common mistakes that cost people at claim time."
+          className="mb-12"
         />
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {tips.map(({ title, description, icon: Icon }) => (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {tips.map(({ title, description, icon: Icon }, i) => (
             <Card
               key={title}
-              className="p-6 shadow-md transition duration-300 hover:shadow-lg"
+              className="group flex h-full flex-col p-6 transition duration-300 hover:border-brand-orange hover:shadow-lg motion-safe:hover:-translate-y-1"
             >
-              <div className="bg-brand-orange-muted w-14 h-14 flex items-center justify-center rounded-full mb-4 mx-auto">
-                <Icon className="w-6 h-6 text-brand-orange-dark" />
+              <div className="flex items-center gap-3">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-orange-muted text-brand-orange-dark transition-transform duration-300 motion-safe:group-hover:scale-110">
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                  Tip {i + 1}
+                </span>
               </div>
-              <h2 className="text-xl font-semibold text-black mb-2 text-center">{title}</h2>
-              <p className="text-gray-700 leading-relaxed text-sm text-center">
-                {description}
-              </p>
+              <h2 className="mt-4 text-lg font-semibold text-black">{title}</h2>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">{description}</p>
             </Card>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 rounded-2xl bg-brand-orange-tint px-6 py-10 text-center">
+          <h2 className="text-2xl font-light text-black">Want advice for your situation?</h2>
+          <p className="mx-auto mt-2 max-w-lg text-gray-700">
+            Our advisors will help you pick the right cover and get the most value — free, no jargon.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Button href="/quote" variant="primary" size="lg">
+              Get a free quote
+            </Button>
+            <Button href="/contact" variant="outline" size="lg">
+              Talk to an advisor
+            </Button>
+          </div>
         </div>
       </div>
     </section>
