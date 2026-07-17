@@ -44,3 +44,38 @@ section[id] {
 .animate-overlay-in {
   animation: overlay-in 0.25s ease-out;
 }
+
+/* "Tap me" attention glow for the contact channel cards.
+   --pulse-color is set per card so each channel glows in its own accent. */
+@keyframes channel-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--pulse-color, rgba(255, 119, 15, 0));
+  }
+  50% {
+    box-shadow: 0 0 16px 3px var(--pulse-color, rgba(255, 119, 15, 0.35));
+  }
+}
+
+.channel-icon {
+  animation: channel-pulse 2.8s ease-in-out infinite;
+}
+
+/* Stagger so the cards breathe out of sync — feels alive, not synchronized. */
+.channel-icon-2 {
+  animation-delay: 0.9s;
+}
+.channel-icon-3 {
+  animation-delay: 1.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .channel-icon,
+  .channel-icon-2,
+  .channel-icon-3 {
+    animation: none;
+  }
+}

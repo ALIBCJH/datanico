@@ -56,6 +56,7 @@ const Contact = () => {
       detail: CONTACT.phone,
       accent: "bg-brand-orange-muted text-brand-orange",
       ring: "hover:border-brand-orange focus-visible:ring-brand-orange",
+      glow: "rgba(255, 119, 15, 0.35)",
     },
     {
       key: "whatsapp",
@@ -66,6 +67,7 @@ const Contact = () => {
       detail: "Chat with an agent now",
       accent: "bg-[#25D366]/10 text-[#1EBE5D]",
       ring: "hover:border-[#25D366] focus-visible:ring-[#25D366]",
+      glow: "rgba(37, 211, 102, 0.40)",
     },
     {
       key: "email",
@@ -75,6 +77,7 @@ const Contact = () => {
       detail: CONTACT.email,
       accent: "bg-brand-orange-muted text-brand-orange",
       ring: "hover:border-brand-orange focus-visible:ring-brand-orange",
+      glow: "rgba(255, 119, 15, 0.35)",
     },
   ];
 
@@ -95,14 +98,19 @@ const Contact = () => {
 
         {/* Quick channels */}
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {channels.map((c) => (
+          {channels.map((c, i) => (
             <a
               key={c.key}
               href={c.href}
               {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className={`group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:flex-col sm:gap-3 sm:text-center ${c.ring}`}
+              className={`group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:flex-col sm:gap-3 sm:text-center ${c.ring}`}
             >
-              <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${c.accent}`}>
+              <span
+                style={{ "--pulse-color": c.glow }}
+                className={`channel-icon ${
+                  i === 1 ? "channel-icon-2" : i === 2 ? "channel-icon-3" : ""
+                } grid h-12 w-12 shrink-0 place-items-center rounded-full transition-transform duration-300 group-hover:scale-110 ${c.accent}`}
+              >
                 {c.icon}
               </span>
               <span className="min-w-0">
