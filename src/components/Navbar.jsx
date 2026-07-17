@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -24,6 +24,20 @@ const Navbar = () => {
     const base = path.split("#")[0] || "/";
     return pathname === base;
   };
+
+  // Close the mobile drawer on Escape and lock body scroll while it's open.
+  useEffect(() => {
+    if (!toggle) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setToggle(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [toggle]);
 
   return (
     <>
@@ -117,8 +131,10 @@ const Navbar = () => {
           <div className="sm:hidden flex items-center">
             <button
               onClick={() => setToggle(true)}
-              className="text-2xl text-brand-purple focus:outline-none"
+              className="p-2 -mr-2 text-2xl text-brand-purple rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
               aria-label="Open menu"
+              aria-expanded={toggle}
+              aria-controls="mobile-menu"
             >
               <FaBars />
             </button>
@@ -126,54 +142,78 @@ const Navbar = () => {
         </div>
 
         {toggle && (
-          <>
-            <div className="fixed top-0 right-0 h-full w-64 bg-[#2a2a2a] z-50 shadow-lg transition-all duration-300">
-              <div className="flex justify-end p-4">
+          <div className="sm:hidden" id="mobile-menu">
+            {/* Dimmed backdrop */}
+            <div
+              onClick={() => setToggle(false)}
+              aria-hidden="true"
+              className="fixed inset-0 bg-black/50 z-40 animate-overlay-in"
+            />
+
+            {/* Slide-in drawer */}
+            <aside
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile navigation"
+              className="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-gradient-to-b from-brand-purple to-brand-deep text-white z-50 shadow-2xl flex flex-col animate-drawer-in"
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-white/15">
+                <span className="font-semibold text-base tracking-wide">Datani Insurance</span>
                 <button
                   onClick={() => setToggle(false)}
-                  className="text-white text-xl focus:outline-none"
+                  className="p-2 -mr-2 text-xl rounded-md text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
                   aria-label="Close menu"
                 >
                   <FaTimes />
                 </button>
               </div>
 
-              <ul className="flex flex-col gap-5 px-6 pt-2 text-[#e0e0e0] text-lg">
+              <ul className="flex flex-col gap-1 px-3 py-4">
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <Link
                       href={link.path}
                       onClick={() => setToggle(false)}
-                      className={`block px-4 py-2 rounded-md transition duration-200 ${
+                      className={`flex items-center px-4 py-3 rounded-lg border-l-4 text-base transition duration-200 ${
                         isActive(link.path)
-                          ? "text-white underline"
-                          : "hover:bg-[#444444] hover:text-white"
+                          ? "bg-white/10 border-brand-orange text-white font-semibold"
+                          : "border-transparent text-white/80 hover:bg-white/10 hover:text-white"
                       }`}
                     >
                       {link.title}
                     </Link>
                   </li>
                 ))}
-
-                <li className="mt-6">
-                  <a
-                    href={CONTACT.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-[#25D366] px-4 py-2 rounded-md hover:opacity-90"
-                  >
-                    <FaWhatsapp className="text-white text-xl" />
-                    <span className="text-white text-sm">Chat on WhatsApp</span>
-                  </a>
-                </li>
               </ul>
-            </div>
 
-            <div
-              onClick={() => setToggle(false)}
-              className="fixed inset-0 bg-black bg-opacity-40 z-40"
-            />
-          </>
+              <div className="mt-auto px-5 py-5 border-t border-white/15 space-y-4">
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-[#25D366] px-4 py-3 rounded-lg font-medium hover:brightness-95 transition"
+                >
+                  <FaWhatsapp className="text-xl" />
+                  <span className="text-sm">Chat on WhatsApp</span>
+                </a>
+
+                <div className="space-y-2 text-sm">
+                  <a
+                    href={`tel:+${CONTACT.phoneIntl}`}
+                    className="flex items-center gap-2 text-white/90 hover:text-white"
+                  >
+                    <FaPhoneAlt className="text-brand-orange" /> {CONTACT.phone}
+                  </a>
+                  <a
+                    href={`mailto:${CONTACT.email}`}
+                    className="flex items-center gap-2 text-white/90 hover:text-white break-all"
+                  >
+                    <FaEnvelope className="text-brand-orange" /> {CONTACT.email}
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
         )}
       </nav>
     </>
