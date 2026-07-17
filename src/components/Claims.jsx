@@ -1,23 +1,23 @@
-import { FaClipboardList, FaRegFileAlt, FaCheckCircle } from "react-icons/fa";
+import { ClipboardList, FileText, CheckCircle2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import PageHeader from "@/components/ui/PageHeader";
 import Card from "@/components/ui/Card";
 
 const steps = [
   {
-    icon: <FaClipboardList className="text-brand-orange text-5xl" />,
+    icon: <ClipboardList className="text-brand-orange" size={48} />,
     title: "Step 1: Notify Us",
     description:
       "Contact us as soon as an incident occurs. Provide basic info about what happened.",
   },
   {
-    icon: <FaRegFileAlt className="text-brand-orange text-5xl" />,
+    icon: <FileText className="text-brand-orange" size={48} />,
     title: "Step 2: Submit Required Documents",
     description:
       "Complete the claim form and attach the necessary supporting documents.",
   },
   {
-    icon: <FaCheckCircle className="text-brand-orange text-5xl" />,
+    icon: <CheckCircle2 className="text-brand-orange" size={48} />,
     title: "Step 3: Review, Approval, and Compensation",
     description:
       "After review, we'll process your claim and send your compensation promptly.",

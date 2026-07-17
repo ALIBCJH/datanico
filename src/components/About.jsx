@@ -1,4 +1,4 @@
-import { FaInfoCircle, FaBullseye, FaEye } from "react-icons/fa";
+import { Info, Target, Eye } from "lucide-react";
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border border-brand-orange-line">
           <div className="flex justify-center items-center mb-6">
-            <FaInfoCircle className="text-brand-orange text-4xl" />
+            <Info className="text-brand-orange" size={36} />
           </div>
           <h2 className="text-4xl font-light text-black mb-4 text-center">About Us</h2>
           <p className="text-lg leading-relaxed text-center">
@@ -23,7 +23,7 @@ const About = () => {
 
         <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border border-brand-orange-line">
           <div className="flex justify-center items-center mb-6">
-            <FaEye className="text-brand-orange text-4xl" />
+            <Eye className="text-brand-orange" size={36} />
           </div>
           <h2 className="text-4xl font-light text-black mb-4 text-center">Our Vision</h2>
           <p className="text-lg leading-relaxed text-center">
@@ -36,7 +36,7 @@ const About = () => {
       <div className="mt-16 flex justify-center">
         <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition max-w-3xl w-full text-center border border-brand-orange-line">
           <div className="flex justify-center items-center mb-6">
-            <FaBullseye className="text-brand-orange text-4xl" />
+            <Target className="text-brand-orange" size={36} />
           </div>
           <h2 className="text-4xl font-light text-black mb-4">Our Mission</h2>
           <p className="text-lg leading-relaxed">

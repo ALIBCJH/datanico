@@ -4,14 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  FaEnvelope,
-  FaWhatsapp,
-  FaBars,
-  FaTimes,
-  FaPhoneAlt,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { Mail, Menu, X, Phone } from "lucide-react";
+import { WhatsAppIcon, XIcon } from "@/components/ui/BrandIcons";
 import FacebookIcon from "@/assets/facebookicon.png";
 import Datanico from "@/assets/datanico.png";
 import { navLinks, CONTACT } from "@/data/constants";
@@ -74,11 +68,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-6 flex-wrap">
             <a href={`tel:+${CONTACT.phoneIntl}`} className="flex items-center gap-1">
-              <FaPhoneAlt className="text-brand-orange" />
+              <Phone className="text-brand-orange" size={14} />
               {CONTACT.phone}
             </a>
             <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1">
-              <FaEnvelope className="text-brand-orange" />
+              <Mail className="text-brand-orange" size={14} />
               {CONTACT.email}
             </a>
           </div>
@@ -91,7 +85,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               title="Visit Datani on X"
             >
-              <FaXTwitter className="text-white text-lg hover:text-brand-orange" />
+              <XIcon className="text-white text-lg hover:text-brand-orange" />
             </a>
             <a
               href={CONTACT.facebook}
@@ -147,7 +141,7 @@ const Navbar = () => {
               className="flex items-center gap-2 hover:opacity-90"
             >
               <div className="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-2xl shadow-md">
-                <FaWhatsapp className="text-white" />
+                <WhatsAppIcon className="text-white" />
               </div>
               <div className="text-right leading-tight">
                 <div className="text-brand-deep font-bold text-sm">{CONTACT.phone}</div>
@@ -164,7 +158,7 @@ const Navbar = () => {
               aria-expanded={toggle}
               aria-controls="mobile-menu"
             >
-              <FaBars />
+              <Menu />
             </button>
           </div>
         </div>
@@ -192,7 +186,7 @@ const Navbar = () => {
                   className="p-1.5 -mr-1 rounded-full text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange transition"
                   aria-label="Close menu"
                 >
-                  <FaTimes />
+                  <X size={20} />
                 </button>
               </div>
 
@@ -221,7 +215,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-[#25D366] px-3 py-2.5 rounded-xl text-sm font-medium hover:brightness-95 transition"
                 >
-                  <FaWhatsapp className="text-lg" />
+                  <WhatsAppIcon className="text-lg" />
                   Chat on WhatsApp
                 </a>
 
@@ -230,13 +224,13 @@ const Navbar = () => {
                     href={`tel:+${CONTACT.phoneIntl}`}
                     className="flex items-center gap-2 text-white/85 hover:text-white"
                   >
-                    <FaPhoneAlt className="text-brand-orange shrink-0" /> {CONTACT.phone}
+                    <Phone className="text-brand-orange shrink-0" size={14} /> {CONTACT.phone}
                   </a>
                   <a
                     href={`mailto:${CONTACT.email}`}
                     className="flex items-center gap-2 text-white/85 hover:text-white break-all"
                   >
-                    <FaEnvelope className="text-brand-orange shrink-0" /> {CONTACT.email}
+                    <Mail className="text-brand-orange shrink-0" size={14} /> {CONTACT.email}
                   </a>
                 </div>
               </div>
