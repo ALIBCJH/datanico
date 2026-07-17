@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Partners from "@/components/Partners";
+import Testimonials from "@/components/Testimonial";
 import BlogList from "@/components/BlogList";
 import Resources from "@/components/Resources";
 import JsonLd from "@/components/JsonLd";
@@ -93,6 +94,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Partners />
+      <Testimonials variant="preview" />
       <BlogList variant="preview" />
       <Resources />
     </>
