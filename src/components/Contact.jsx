@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FaPhoneAlt, FaMapMarkerAlt, FaClock, FaWhatsapp } from "react-icons/fa";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/BrandIcons";
 import { CONTACT } from "@/data/constants";
 import Field, { inputClass } from "@/components/ui/Field";
 import Button from "@/components/ui/Button";
@@ -130,14 +131,14 @@ const Contact = () => {
         <div className="bg-white rounded-xl shadow-md p-8 flex flex-col justify-center text-left space-y-6">
           <div>
             <h2 className="text-2xl font-light text-black mb-2 flex items-center gap-2">
-              <FaPhoneAlt className="text-brand-orange" /> Call Us
+              <Phone className="text-brand-orange" size={22} /> Call Us
             </h2>
             <p className="text-lg text-gray-700 mb-1">{CONTACT.phone}</p>
           </div>
 
           <div>
             <h2 className="text-2xl font-light text-black mb-2 flex items-center gap-2">
-              <FaClock className="text-brand-orange" /> Office Hours
+              <Clock className="text-brand-orange" size={22} /> Office Hours
             </h2>
             <p className="text-sm text-gray-600">
               Monday – Saturday
@@ -148,7 +149,7 @@ const Contact = () => {
 
           <div>
             <h2 className="text-2xl font-light text-black mb-2 flex items-center gap-2">
-              <FaMapMarkerAlt className="text-brand-orange" /> Visit Us
+              <MapPin className="text-brand-orange" size={22} /> Visit Us
             </h2>
             <div className="h-48 w-full rounded-md overflow-hidden">
               <iframe
@@ -169,7 +170,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-start gap-3 text-brand-orange bg-brand-orange-soft hover:bg-[#1EBE5D] hover:text-white px-4 py-2 rounded-md text-lg font-medium transition duration-300"
             >
-              <FaWhatsapp className="text-xl" /> WhatsApp Us – {CONTACT.phone}
+              <WhatsAppIcon className="text-xl" /> WhatsApp Us – {CONTACT.phone}
             </a>
           </div>
         </div>
