@@ -20,7 +20,10 @@ module.exports = {
             muted: "#FFE7D2", // icon-circle background
             line: "#FDD3AC", // soft border
           },
-          purple: "#3B2B78",
+          purple: {
+            DEFAULT: "#3B2B78",
+            light: "#6C5CA8", // softer purple — mobile CTA
+          },
           deep: "#352969",
         },
       },
