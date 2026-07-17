@@ -13,7 +13,7 @@ const resources = [
     title: "Insurance Tips",
     description:
       "Get valuable advice to help you choose the right coverage, avoid pitfalls, and save more.",
-    link: "/insurancetips",
+    link: "/insurance-tips",
   },
   {
     icon: <HelpCircle size={44} className="text-brand-orange" />,

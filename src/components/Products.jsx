@@ -1,145 +1,41 @@
 import Link from "next/link";
-import {
-  Car,
-  HeartPulse,
-  Home,
-  Plane,
-  ShieldCheck,
-  Users,
-  Wallet,
-  PhoneCall,
-  Mail,
-  Truck,
-  Briefcase,
-} from "lucide-react";
+import { PhoneCall, Mail, ArrowRight } from "lucide-react";
+import { products } from "@/data/products";
 import { CONTACT } from "@/data/constants";
-
-const productData = [
-  {
-    title: "Motor Insurance",
-    subtitle: "Drive with Confidence",
-    points: [
-      "Third-Party Only",
-      "Third-Party, Fire & Theft",
-      "Comprehensive Cover",
-      "Optional add-ons: Windscreen protection, personal accident cover, roadside assistance",
-    ],
-    icon: Car,
-  },
-  {
-    title: "Medical Insurance",
-    subtitle: "Your Health Comes First",
-    points: [
-      "Inpatient Cover",
-      "Outpatient Services",
-      "Maternity Cover",
-      "Dental, Optical, and Chronic Illness Benefits",
-    ],
-    icon: HeartPulse,
-  },
-  {
-    title: "Property Insurance",
-    subtitle: "Protect Your Home and Business Premises",
-    points: [
-      "Fire & Allied Perils Cover",
-      "Burglary & Theft Insurance",
-      "Domestic Package (Home Insurance)",
-      "Commercial Property Cover",
-    ],
-    icon: Home,
-  },
-  {
-    title: "Marine & Goods in Transit Insurance",
-    subtitle: "Cover Your Goods While They Move",
-    points: [
-      "Marine Cargo Insurance (Air/Sea)",
-      "Goods in Transit Insurance (Road/Rail)",
-    ],
-    icon: Truck,
-  },
-  {
-    title: "Liability Insurance",
-    subtitle: "Protect Your Business from Legal Risks",
-    points: [
-      "Public Liability Insurance",
-      "Employer's Liability",
-      "Professional Indemnity Cover",
-      "Directors & Officers Liability (D&O)",
-    ],
-    icon: ShieldCheck,
-  },
-  {
-    title: "Life Insurance",
-    subtitle: "Secure Their Future, Today",
-    points: [
-      "Term Life Cover",
-      "Whole Life Insurance",
-      "Endowment Plans",
-      "Investment-Linked Plans",
-    ],
-    icon: Users,
-  },
-  {
-    title: "Retirement & Pension Plans",
-    subtitle: "Plan Now, Enjoy Later",
-    points: [
-      "Individual Retirement Plans",
-      "Group Pension Schemes (for employers and teams)",
-    ],
-    icon: Wallet,
-  },
-  {
-    title: "Investment Plans",
-    subtitle: "Grow Your Wealth",
-    points: [
-      "Unit Linked Investment Plans",
-      "Mutual Funds",
-      "Fixed Deposits with Insurance Benefits",
-    ],
-    icon: Briefcase,
-  },
-  {
-    title: "Travel Insurance",
-    subtitle: "Travel with Peace of Mind",
-    points: [
-      "Trip Cancellation and Interruption",
-      "Medical Emergencies Abroad",
-      "Lost Luggage and Delays",
-      "Personal Liability while Traveling",
-    ],
-    icon: Plane,
-  },
-];
 
 const Products = () => {
   return (
     <section className="min-h-screen bg-white px-6 pt-11 pb-20 max-w-7xl mx-auto font-montserrat">
-      <h1 className="text-4xl sm:text-5xl font-light text-black mb-8 text-center">
+      <h1 className="text-4xl sm:text-5xl font-light text-black mb-4 text-center">
         Our Insurance Products
       </h1>
+      <p className="text-gray-600 text-lg max-w-2xl text-center mx-auto mb-12">
+        Cover for every part of life and business in Nyeri and across Kenya. Choose a
+        product to learn what it includes, or request a free quote.
+      </p>
 
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {productData.map(({ title, subtitle, points, icon: Icon }) => (
+        {products.map(({ slug, title, subtitle, icon: Icon }) => (
           <div
-            key={title}
+            key={slug}
             className="bg-white rounded-3xl shadow-md hover:shadow-lg border border-gray-200 transition duration-300 p-8 flex flex-col justify-between"
           >
             <div>
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
                 <Icon className="w-8 h-8 text-brand-orange" />
               </div>
-              <h2 className="text-xl font-semibold text-center text-black mb-2">{title}</h2>
-              <p className="text-center text-gray-700 font-medium mb-4">{subtitle}</p>
-              <ul className="list-disc text-gray-600 text-sm space-y-3 leading-relaxed pl-5">
-                {points.map((point) => (
-                  <li
-                    key={point}
-                    className="hover:text-brand-orange transition-colors duration-200"
-                  >
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              <h2 className="text-xl font-semibold text-center text-black mb-2">
+                <Link href={`/insurance/${slug}`} className="hover:text-brand-orange transition">
+                  {title}
+                </Link>
+              </h2>
+              <p className="text-center text-gray-700 font-medium mb-6">{subtitle}</p>
+              <Link
+                href={`/insurance/${slug}`}
+                className="flex items-center justify-center gap-1 text-brand-orange font-medium text-sm hover:underline"
+              >
+                Learn more <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
             <Link
               href="/quote"

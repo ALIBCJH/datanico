@@ -4,6 +4,7 @@ import Partners from "@/components/Partners";
 import BlogList from "@/components/BlogList";
 import Resources from "@/components/Resources";
 import JsonLd from "@/components/JsonLd";
+import { CONTACT } from "@/data/constants";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://datani.co.ke";
 
@@ -22,20 +23,53 @@ export const metadata = {
 const agencyJsonLd = {
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
+  "@id": `${SITE_URL}/#organization`,
   name: "Datani Insurance Agency",
   description:
     "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya.",
   url: SITE_URL,
+  logo: `${SITE_URL}/icon.png`,
+  image: `${SITE_URL}/icon.png`,
   telephone: "+254714046604",
   email: "info@datani.co.ke",
+  priceRange: "$$",
+  currenciesAccepted: "KES",
+  sameAs: [CONTACT.facebook, CONTACT.twitter],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Mawaidha House, Ground Floor, Kimathi Street",
     addressLocality: "Nyeri",
+    addressRegion: "Nyeri County",
     addressCountry: "KE",
     postOfficeBoxNumber: "492 - 10100",
   },
-  areaServed: "KE",
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -0.4253855,
+    longitude: 36.9539997,
+  },
+  areaServed: [
+    { "@type": "City", name: "Nyeri" },
+    { "@type": "Country", name: "Kenya" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Insurance products",
+    itemListElement: [
+      "Motor Insurance",
+      "Medical Insurance",
+      "Property Insurance",
+      "Marine & Goods in Transit Insurance",
+      "Liability Insurance",
+      "Life Insurance",
+      "Retirement & Pension Plans",
+      "Investment Plans",
+      "Travel Insurance",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

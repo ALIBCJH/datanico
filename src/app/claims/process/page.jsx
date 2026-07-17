@@ -6,7 +6,7 @@ export const metadata = {
   title: "Claims Process & Requirements",
   description:
     "Step-by-step guide to filing an insurance claim with Datani Insurance Agency: how to report, documents required, review, approval and settlement.",
-  alternates: { canonical: "/requirementclaim" },
+  alternates: { canonical: "/claims/process" },
 };
 
 const claimSteps = [
@@ -89,7 +89,7 @@ export default function RequirementClaimPage() {
             FAQs
           </button>
         </Link>
-        <Link href="/claimpage">
+        <Link href="/claims/file">
           <button className="bg-brand-orange hover:bg-orange-700 text-white text-base sm:text-lg px-6 py-3 rounded-xl font-medium transition shadow-md">
             File a Claim
           </button>

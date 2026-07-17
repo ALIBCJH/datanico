@@ -42,7 +42,7 @@ const Claims = () => {
         </div>
 
         <Link
-          href="/requirementclaim"
+          href="/claims/process"
           className="inline-block mt-12 bg-brand-orange text-white py-3 px-10 rounded-full text-lg font-medium hover:brightness-95 transition"
         >
           File a Claim →

@@ -4,7 +4,7 @@ export const metadata = {
   title: "Smart Insurance Tips",
   description:
     "Practical insurance tips from Datani Insurance Agency: review policies annually, bundle to save, understand the fine print, and set the right coverage.",
-  alternates: { canonical: "/insurancetips" },
+  alternates: { canonical: "/insurance-tips" },
 };
 
 const tips = [
