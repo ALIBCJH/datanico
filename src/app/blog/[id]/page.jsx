@@ -37,7 +37,7 @@ export default function BlogPost({ params }) {
         <p className="text-gray-500 mb-8 text-sm">
           {post.date} • {post.readTime}
         </p>
-        <div className="prose prose-lg max-w-none text-gray-800 leading-relaxed space-y-5">
+        <div className="max-w-none text-gray-800 text-lg leading-relaxed space-y-5">
           {paragraphs.map((para, i) => (
             <p key={i}>{para}</p>
           ))}

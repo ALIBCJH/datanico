@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CONTACT } from "@/data/constants";
 
-const year = 2025;
+const year = new Date().getFullYear();
 
 const products = [
   "Motor Insurance",
