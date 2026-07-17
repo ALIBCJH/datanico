@@ -52,7 +52,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable}>
-      <body className="bg-white text-gray-800 antialiased">
+      <body className="bg-white text-gray-800 antialiased min-h-screen border-x-4 border-b-4 border-brand-purple">
         <Navbar />
         <main>{children}</main>
         <CookieConsent />
