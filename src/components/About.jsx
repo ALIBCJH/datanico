@@ -4,10 +4,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#FAFAFA] px-6 sm:px-10 py-20 max-w-7xl mx-auto text-gray-700 font-montserrat"
+      className="bg-gradient-to-b from-white via-white to-[#FAFAFA] font-montserrat"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border-2 border-brand-orange">
+      <div className="px-6 sm:px-10 pt-10 pb-20 max-w-7xl mx-auto text-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border border-orange-200">
           <div className="flex justify-center items-center mb-6">
             <FaInfoCircle className="text-brand-orange text-4xl" />
           </div>
@@ -20,7 +21,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border-2 border-brand-orange">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition border border-orange-200">
           <div className="flex justify-center items-center mb-6">
             <FaEye className="text-brand-orange text-4xl" />
           </div>
@@ -33,7 +34,7 @@ const About = () => {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition max-w-3xl w-full text-center border-2 border-brand-orange">
+        <div className="bg-gray-50 rounded-2xl p-10 shadow hover:shadow-lg transition max-w-3xl w-full text-center border border-orange-200">
           <div className="flex justify-center items-center mb-6">
             <FaBullseye className="text-brand-orange text-4xl" />
           </div>
@@ -43,6 +44,7 @@ const About = () => {
             financial protection, and confidence in life&apos;s uncertain moments.
           </p>
         </div>
+      </div>
       </div>
     </section>
   );
