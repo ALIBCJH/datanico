@@ -175,34 +175,34 @@ const Navbar = () => {
             <div
               onClick={() => setToggle(false)}
               aria-hidden="true"
-              className="fixed inset-0 bg-black/50 z-40 animate-overlay-in"
+              className="fixed inset-0 bg-black/30 z-40 animate-overlay-in"
             />
 
-            {/* Slide-in drawer */}
+            {/* Compact floating menu that pops from the hamburger */}
             <aside
               role="dialog"
               aria-modal="true"
               aria-label="Mobile navigation"
-              className="fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-gradient-to-b from-brand-purple to-brand-deep text-white z-50 shadow-2xl flex flex-col animate-drawer-in"
+              className="fixed top-3 right-3 z-50 w-60 max-w-[78vw] max-h-[calc(100vh-1.5rem)] overflow-y-auto rounded-2xl bg-gradient-to-b from-brand-purple to-brand-deep text-white shadow-2xl ring-1 ring-white/10 flex flex-col animate-menu-pop"
             >
-              <div className="flex items-center justify-between px-5 py-4 border-b border-white/15">
-                <span className="font-semibold text-base tracking-wide">Datani Insurance</span>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-white/15">
+                <span className="font-semibold text-sm tracking-wide">Menu</span>
                 <button
                   onClick={() => setToggle(false)}
-                  className="p-2 -mr-2 text-xl rounded-md text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
+                  className="p-1.5 -mr-1 rounded-full text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange transition"
                   aria-label="Close menu"
                 >
                   <FaTimes />
                 </button>
               </div>
 
-              <ul className="flex flex-col gap-1 px-3 py-4">
+              <ul className="flex flex-col gap-0.5 p-2">
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <Link
                       href={link.path}
                       onClick={() => setToggle(false)}
-                      className={`flex items-center px-4 py-3 rounded-lg border-l-4 text-base transition duration-200 ${
+                      className={`flex items-center px-3 py-2.5 rounded-xl border-l-4 text-sm transition duration-200 ${
                         isActive(link.path)
                           ? "bg-white/10 border-brand-orange text-white font-semibold"
                           : "border-transparent text-white/80 hover:bg-white/10 hover:text-white"
@@ -214,29 +214,29 @@ const Navbar = () => {
                 ))}
               </ul>
 
-              <div className="mt-auto px-5 py-5 border-t border-white/15 space-y-4">
+              <div className="px-3 pb-3 pt-2 border-t border-white/15 space-y-3">
                 <a
                   href={CONTACT.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#25D366] px-4 py-3 rounded-lg font-medium hover:brightness-95 transition"
+                  className="flex items-center justify-center gap-2 bg-[#25D366] px-3 py-2.5 rounded-xl text-sm font-medium hover:brightness-95 transition"
                 >
-                  <FaWhatsapp className="text-xl" />
-                  <span className="text-sm">Chat on WhatsApp</span>
+                  <FaWhatsapp className="text-lg" />
+                  Chat on WhatsApp
                 </a>
 
-                <div className="space-y-2 text-sm">
+                <div className="space-y-1.5 px-1 text-xs">
                   <a
                     href={`tel:+${CONTACT.phoneIntl}`}
-                    className="flex items-center gap-2 text-white/90 hover:text-white"
+                    className="flex items-center gap-2 text-white/85 hover:text-white"
                   >
-                    <FaPhoneAlt className="text-brand-orange" /> {CONTACT.phone}
+                    <FaPhoneAlt className="text-brand-orange shrink-0" /> {CONTACT.phone}
                   </a>
                   <a
                     href={`mailto:${CONTACT.email}`}
-                    className="flex items-center gap-2 text-white/90 hover:text-white break-all"
+                    className="flex items-center gap-2 text-white/85 hover:text-white break-all"
                   >
-                    <FaEnvelope className="text-brand-orange" /> {CONTACT.email}
+                    <FaEnvelope className="text-brand-orange shrink-0" /> {CONTACT.email}
                   </a>
                 </div>
               </div>
