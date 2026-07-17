@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import WhatsAppFab from "@/components/WhatsAppFab";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-gray-800 antialiased">
         <Navbar />
         <main>{children}</main>
+        <WhatsAppFab />
         <CookieConsent />
         <Footer />
       </body>
