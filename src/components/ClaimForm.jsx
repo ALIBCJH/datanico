@@ -7,6 +7,7 @@ import { CONTACT } from "@/data/constants";
 import Field, { inputClass } from "@/components/ui/Field";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import Honeypot from "@/components/ui/Honeypot";
 
 const CLAIM_TYPES = [
   { value: "general", label: "General Insurance" },
@@ -36,6 +37,7 @@ const ClaimForm = () => {
     policyNumber: "",
     claimType: "",
     description: "",
+    company: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -71,6 +73,7 @@ const ClaimForm = () => {
           email: formData.email,
           phone: formData.phone,
           message,
+          company: formData.company,
           source: "Claim form",
         }),
       });
@@ -85,6 +88,7 @@ const ClaimForm = () => {
           policyNumber: "",
           claimType: "",
           description: "",
+          company: "",
         });
       } else {
         setError(data.error || "Failed to submit your claim. Please try again.");
@@ -150,6 +154,7 @@ const ClaimForm = () => {
               </div>
             ) : (
               <form className="space-y-8" onSubmit={handleSubmit}>
+                <Honeypot value={formData.company} onChange={handleChange} />
                 {/* Your details */}
                 <div>
                   <GroupLabel>Your details</GroupLabel>
