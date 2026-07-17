@@ -32,7 +32,7 @@ const Hero = () => {
       />
 
       {/* Soft fade so the banner melts into the page instead of ending on a hard edge. */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 sm:h-28 md:h-36 bg-gradient-to-b from-transparent to-white z-10" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 sm:h-10 md:h-16 bg-gradient-to-b from-transparent to-white z-10" />
 
       <div className="absolute top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
         <Link href="/quote">

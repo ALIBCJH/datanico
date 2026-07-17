@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gradient-to-b from-white via-white to-[#FAFAFA] font-montserrat"
+      className="bg-[#FAFAFA] font-montserrat"
     >
       <div className="px-6 sm:px-10 pt-10 pb-20 max-w-7xl mx-auto text-gray-700">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
