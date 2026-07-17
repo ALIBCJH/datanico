@@ -74,11 +74,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-6 flex-wrap">
             <a href={`tel:+${CONTACT.phoneIntl}`} className="flex items-center gap-1">
-              <FaPhoneAlt className="text-orange-500" />
+              <FaPhoneAlt className="text-brand-orange" />
               {CONTACT.phone}
             </a>
             <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1">
-              <FaEnvelope className="text-orange-500" />
+              <FaEnvelope className="text-brand-orange" />
               {CONTACT.email}
             </a>
           </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               title="Visit Datani on X"
             >
-              <FaXTwitter className="text-white text-lg hover:text-orange-400" />
+              <FaXTwitter className="text-white text-lg hover:text-brand-orange" />
             </a>
             <a
               href={CONTACT.facebook}
@@ -129,8 +129,8 @@ const Navbar = () => {
                   href={link.path}
                   className={`px-2 py-1 rounded-md transition duration-200 ${
                     isActive(link.path)
-                      ? "font-semibold text-orange-600"
-                      : "hover:text-orange-600"
+                      ? "font-semibold text-brand-orange-dark"
+                      : "hover:text-brand-orange-dark"
                   }`}
                 >
                   {link.title}

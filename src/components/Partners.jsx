@@ -31,7 +31,7 @@ const Partners = () => {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="bg-white rounded-xl p-6 flex items-center justify-center h-40 shadow-md hover:shadow-[#FF5722] transition-shadow duration-300 border border-gray-100 hover:border-yellow-400"
+              className="bg-white rounded-xl p-6 flex items-center justify-center h-40 shadow-md hover:shadow-brand-orange transition-shadow duration-300 border border-gray-100 hover:border-brand-orange-line"
             >
               <Image
                 src={partner.logo}

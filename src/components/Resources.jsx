@@ -34,7 +34,7 @@ const Resources = () => {
           {resources.map(({ icon, title, description, link }) => (
             <div
               key={title}
-              className="bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-lg hover:bg-orange-50 transition duration-300 flex flex-col justify-between text-center"
+              className="bg-white border border-gray-200 rounded-3xl p-8 shadow-md hover:shadow-lg hover:bg-brand-orange-tint transition duration-300 flex flex-col justify-between text-center"
             >
               <div>
                 <div className="flex justify-center items-center mb-4">{icon}</div>
@@ -45,7 +45,7 @@ const Resources = () => {
               <Link
                 href={link}
                 aria-label={`Explore ${title}`}
-                className="inline-block bg-[#FFE5D3] text-brand-orange font-medium text-base px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
+                className="inline-block bg-brand-orange-soft text-brand-orange font-medium text-base px-6 py-3 rounded-full transition duration-300 hover:bg-brand-orange hover:text-white"
               >
                 Explore
               </Link>

@@ -21,7 +21,7 @@ const Products = () => {
             className="bg-white rounded-3xl shadow-md hover:shadow-lg border border-gray-200 transition duration-300 p-8 flex flex-col justify-between"
           >
             <div>
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
+              <div className="w-16 h-16 bg-brand-orange-muted rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">
                 <Icon className="w-8 h-8 text-brand-orange" />
               </div>
               <h2 className="text-xl font-semibold text-center text-black mb-2">
@@ -59,9 +59,9 @@ const Products = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <a
             href={`tel:+${CONTACT.phoneIntl}`}
-            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]"
+            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-brand-orange hover:bg-brand-orange-tint transition duration-300 w-[300px]"
           >
-            <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
+            <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
               <PhoneCall className="w-6 h-6" />
             </div>
             <div className="text-left">
@@ -72,9 +72,9 @@ const Products = () => {
 
           <a
             href={`mailto:${CONTACT.email}`}
-            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-orange-500 hover:bg-orange-50 transition duration-300 w-[300px]"
+            className="flex items-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-md hover:shadow-lg hover:border-brand-orange hover:bg-brand-orange-tint transition duration-300 w-[300px]"
           >
-            <div className="bg-orange-100 text-brand-orange p-3 rounded-full">
+            <div className="bg-brand-orange-muted text-brand-orange p-3 rounded-full">
               <Mail className="w-6 h-6" />
             </div>
             <div className="text-left">

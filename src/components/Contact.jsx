@@ -124,7 +124,7 @@ const Contact = () => {
               className={`w-full py-3 rounded-md text-lg font-medium transition duration-300 ${
                 loading
                   ? "bg-gray-400 text-white cursor-not-allowed"
-                  : "bg-[#FFE5D3] text-brand-orange hover:bg-brand-orange hover:text-white"
+                  : "bg-brand-orange-soft text-brand-orange hover:bg-brand-orange hover:text-white"
               }`}
             >
               {loading ? "Sending..." : "Send Message"}
@@ -179,7 +179,7 @@ const Contact = () => {
               href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-start gap-3 text-brand-orange bg-[#FFE5D3] hover:bg-[#1EBE5D] hover:text-white px-4 py-2 rounded-md text-lg font-medium transition duration-300"
+              className="flex items-center justify-start gap-3 text-brand-orange bg-brand-orange-soft hover:bg-[#1EBE5D] hover:text-white px-4 py-2 rounded-md text-lg font-medium transition duration-300"
             >
               <FaWhatsapp className="text-xl" /> WhatsApp Us – {CONTACT.phone}
             </a>
