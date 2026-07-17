@@ -68,8 +68,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 text-center text-white/80">
+        <div className="border-t border-white/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/80">
           <p>© {year} Datani Insurance Agency. All rights reserved.</p>
+          <div className="flex gap-5">
+            <Link href="/privacy" className="hover:text-brand-orange transition">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-brand-orange transition">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

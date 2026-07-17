@@ -79,3 +79,35 @@ section[id] {
     animation: none;
   }
 }
+
+/* Long-form reading styles for legal/content pages (no typography plugin). */
+.legal-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.legal-content p {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+.legal-content li {
+  line-height: 1.75;
+  margin-bottom: 0.375rem;
+}
+.legal-content a {
+  color: #e86500;
+  text-decoration: underline;
+}
+.legal-content strong {
+  color: #111827;
+  font-weight: 600;
+}
