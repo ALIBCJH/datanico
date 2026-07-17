@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { WhatsAppIcon } from "@/components/ui/BrandIcons";
+import { CONTACT } from "@/data/constants";
 import heroDesktop from "@/assets/hero.webp";
 import heroMobile from "@/assets/mobileHero.webp";
 
@@ -34,12 +36,24 @@ const Hero = () => {
       {/* Soft fade so the banner melts into the page instead of ending on a hard edge. */}
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 sm:h-10 md:h-16 bg-gradient-to-b from-transparent to-white z-10" />
 
-      <div className="absolute top-[85%] sm:top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
+      <div className="absolute top-[85%] sm:top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20 flex items-center gap-3">
         <Link href="/quote">
           <button className="bg-brand-purple-light sm:bg-brand-orange rounded-full sm:rounded-none text-white text-sm sm:text-base md:text-lg font-semibold px-6 sm:px-6 md:px-12 py-2.5 sm:py-3 shadow-md hover:brightness-95 hover:scale-105 transition-transform duration-300 max-w-fit">
             Get Your Quote
           </button>
         </Link>
+
+        {/* Floating WhatsApp quick-chat — mobile only (on desktop it's in the navbar). */}
+        <a
+          href={CONTACT.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          style={{ "--pulse-color": "rgba(37, 211, 102, 0.5)" }}
+          className="channel-icon grid h-11 w-11 place-items-center rounded-full bg-[#25D366] text-white shadow-md transition hover:brightness-95 motion-safe:hover:scale-105 sm:hidden"
+        >
+          <WhatsAppIcon className="text-xl" />
+        </a>
       </div>
     </section>
   );
