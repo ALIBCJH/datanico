@@ -8,9 +8,5 @@ export const metadata = {
 };
 
 export default function QuotePage() {
-  return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4">
-      <QuoteForm />
-    </div>
-  );
+  return <QuoteForm />;
 }
