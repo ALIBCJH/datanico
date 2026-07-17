@@ -31,6 +31,9 @@ const Hero = () => {
         sizes="100vw"
       />
 
+      {/* Soft fade so the banner melts into the page instead of ending on a hard edge. */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-20 sm:h-28 md:h-36 bg-gradient-to-b from-transparent to-white z-10" />
+
       <div className="absolute top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
         <Link href="/quote">
           <button className="bg-brand-orange text-white text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 md:px-12 py-2 sm:py-3 shadow-md hover:brightness-95 hover:scale-105 transition-transform duration-300 max-w-fit">
