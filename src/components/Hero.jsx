@@ -13,7 +13,7 @@ const Hero = () => {
         and adds the location keyword.
       */}
       <h1 className="sr-only">
-        Datani Insurance Agency — insurance in Nyeri, Kenya that puts you first
+        Datani Insurance Agency — insurance across Kenya that puts you first
       </h1>
 
       <Image

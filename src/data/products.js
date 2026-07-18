@@ -21,7 +21,7 @@ export const products = [
     icon: Car,
     metaTitle: "Motor Insurance in Kenya",
     metaDescription:
-      "Third-party, fire & theft and comprehensive motor insurance in Nyeri and across Kenya. Compare cover and get a free car insurance quote from Datani Insurance Agency.",
+      "Third-party, fire & theft and comprehensive motor insurance across Kenya. Compare cover and get a free car insurance quote from Datani Insurance Agency.",
     intro: [
       "Whether you drive a private car, a matatu, a lorry or a fleet, motor insurance keeps you on the road without the fear of a single accident wiping out your finances. Datani Insurance Agency helps you compare cover from Kenya's leading underwriters and pick the option that fits how — and how much — you actually drive.",
       "From the mandatory minimum to full comprehensive protection, we explain the trade-offs in plain language so you know exactly what you're paying for.",
@@ -42,7 +42,7 @@ export const products = [
     icon: HeartPulse,
     metaTitle: "Medical & Health Insurance in Kenya",
     metaDescription:
-      "Inpatient, outpatient and maternity medical cover for individuals, families and groups in Kenya. Get a health insurance quote from Datani Insurance Agency in Nyeri.",
+      "Inpatient, outpatient and maternity medical cover for individuals, families and groups in Kenya. Get a health insurance quote from Datani Insurance Agency.",
     intro: [
       "A single hospital admission can undo years of savings. Medical insurance means you and your family can seek treatment when you need it — not only when you can afford it. We arrange individual, family and group schemes with cashless access to a wide network of hospitals.",
       "We help you match the inpatient limit, outpatient benefit and add-ons to your family's real needs and budget.",
@@ -63,7 +63,7 @@ export const products = [
     icon: Home,
     metaTitle: "Property & Home Insurance in Kenya",
     metaDescription:
-      "Fire, burglary and domestic package cover for homes and commercial premises in Kenya. Protect your property with Datani Insurance Agency in Nyeri.",
+      "Fire, burglary and domestic package cover for homes and commercial premises in Kenya. Protect your property with Datani Insurance Agency.",
     intro: [
       "Your home or business premises is likely your largest single asset. Property insurance rebuilds and restocks after fire, floods, burglary and other perils, so a bad day doesn't become a permanent setback.",
       "We cover everything from a family home to a shop, godown or office block, and help you insure to the correct replacement value so you're never caught underinsured.",
@@ -104,7 +104,7 @@ export const products = [
     icon: ShieldCheck,
     metaTitle: "Liability Insurance for Businesses in Kenya",
     metaDescription:
-      "Public liability, employer's liability, professional indemnity and D&O cover for Kenyan businesses. Manage legal risk with Datani Insurance Agency in Nyeri.",
+      "Public liability, employer's liability, professional indemnity and D&O cover for Kenyan businesses. Manage legal risk with Datani Insurance Agency.",
     intro: [
       "A customer injured on your premises, an employee hurt at work, or a professional mistake can each lead to a costly claim. Liability insurance covers the legal costs and compensation, protecting your business and personal assets.",
       "We tailor cover to your industry and exposure — from a small shop needing public liability to a firm requiring professional indemnity.",
@@ -125,7 +125,7 @@ export const products = [
     icon: Users,
     metaTitle: "Life Insurance & Assurance in Kenya",
     metaDescription:
-      "Term, whole-life and endowment life assurance in Kenya. Provide for your family's future with a life insurance plan from Datani Insurance Agency in Nyeri.",
+      "Term, whole-life and endowment life assurance in Kenya. Provide for your family's future with a life insurance plan from Datani Insurance Agency.",
     intro: [
       "Life insurance answers one question: if you were no longer here, would your family be alright? A life policy pays out a lump sum that can settle debts, cover school fees and replace lost income — turning a tragedy into something your loved ones can weather.",
       "We help you choose between affordable term cover and plans that also build a cash value over time.",
@@ -146,7 +146,7 @@ export const products = [
     icon: Wallet,
     metaTitle: "Retirement & Pension Plans in Kenya",
     metaDescription:
-      "Individual retirement plans and group pension schemes in Kenya. Build a comfortable retirement with Datani Insurance Agency in Nyeri.",
+      "Individual retirement plans and group pension schemes in Kenya. Build a comfortable retirement with Datani Insurance Agency.",
     intro: [
       "The income you enjoy in retirement depends on the choices you make today. A pension plan lets you save steadily during your working years and draw a reliable income when you stop — with valuable tax advantages along the way.",
       "We set up plans for individuals as well as group schemes that employers can offer their teams.",
@@ -166,7 +166,7 @@ export const products = [
     icon: Briefcase,
     metaTitle: "Investment Plans in Kenya",
     metaDescription:
-      "Unit-linked plans, mutual funds and insurance-backed savings in Kenya. Grow your money with guidance from Datani Insurance Agency in Nyeri.",
+      "Unit-linked plans, mutual funds and insurance-backed savings in Kenya. Grow your money with guidance from Datani Insurance Agency.",
     intro: [
       "Saving protects your money; investing grows it. Insurance-backed investment plans combine disciplined saving with market returns and a measure of protection, helping you build toward goals like a home, education or financial freedom.",
       "We explain the risk and return of each option so you can invest with confidence rather than guesswork.",
@@ -186,7 +186,7 @@ export const products = [
     icon: Plane,
     metaTitle: "Travel Insurance in Kenya",
     metaDescription:
-      "Travel insurance for medical emergencies, cancellations and lost luggage abroad. Get covered before your trip with Datani Insurance Agency in Nyeri.",
+      "Travel insurance for medical emergencies, cancellations and lost luggage abroad. Get covered before your trip with Datani Insurance Agency.",
     intro: [
       "A medical emergency abroad — or a cancelled flight and lost luggage — can turn a trip into an expensive ordeal. Travel insurance covers you from the moment you book, and is often required for a visa.",
       "We arrange cover for single trips or frequent travellers, for business or holiday.",

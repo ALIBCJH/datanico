@@ -21,10 +21,9 @@ export const metadata = {
     template: "%s | Datani Insurance Agency",
   },
   description:
-    "Datani Insurance Agency in Nyeri, Kenya offers motor, medical, property, life, travel and business insurance. Expert advice, reliable protection and fast claims. Get a free quote today.",
+    "Datani Insurance Agency in Kenya offers motor, medical, property, life, travel and business insurance. Expert advice, reliable protection and fast claims. Get a free quote today.",
   keywords: [
     "insurance Kenya",
-    "insurance Nyeri",
     "motor insurance",
     "medical insurance",
     "life insurance",
@@ -39,13 +38,13 @@ export const metadata = {
     siteName: "Datani Insurance Agency",
     title: "Datani Insurance Agency | Service That Shields",
     description:
-      "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya. Get a free quote today.",
+      "Motor, medical, property, life, travel and business insurance across Kenya. Get a free quote today.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Datani Insurance Agency",
     description:
-      "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya.",
+      "Motor, medical, property, life, travel and business insurance across Kenya.",
   },
   robots: { index: true, follow: true },
 };
