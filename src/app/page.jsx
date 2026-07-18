@@ -11,13 +11,13 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://datani.co.ke";
 
 export const metadata = {
   description:
-    "Datani Insurance Agency in Nyeri, Kenya — motor, medical, property, life, travel and business insurance. Expert advice, reliable protection and fast claims. Get a free quote today.",
+    "Datani Insurance Agency in Kenya — motor, medical, property, life, travel and business insurance. Expert advice, reliable protection and fast claims. Get a free quote today.",
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
     title: "Datani Insurance Agency | Service That Shields",
     description:
-      "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya. Get a free quote today.",
+      "Motor, medical, property, life, travel and business insurance across Kenya. Get a free quote today.",
   },
 };
 
@@ -27,7 +27,7 @@ const agencyJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: "Datani Insurance Agency",
   description:
-    "Motor, medical, property, life, travel and business insurance in Nyeri, Kenya.",
+    "Motor, medical, property, life, travel and business insurance across Kenya.",
   url: SITE_URL,
   logo: `${SITE_URL}/icon.png`,
   image: `${SITE_URL}/icon.png`,

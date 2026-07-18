@@ -49,7 +49,7 @@ const Products = () => {
       <PageHeader
         className="mb-6"
         title="Our Insurance Products"
-        intro="Cover for every part of life and business in Nyeri and across Kenya. Explore a product to see what it includes — or get a free quote in minutes."
+        intro="Cover for every part of life and business, across Kenya. Explore a product to see what it includes — or get a free quote in minutes."
       />
 
       <div className="mb-14 flex justify-center">
