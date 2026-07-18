@@ -1,20 +1,31 @@
 "use client";
 
 import { useState } from "react";
-import { BadgeCheck, ShieldCheck, PhoneCall, CheckCircle2 } from "lucide-react";
+import {
+  BadgeCheck,
+  ShieldCheck,
+  PhoneCall,
+  CheckCircle2,
+  HeartPulse,
+  Users,
+  Car,
+  Home,
+  Plane,
+  Briefcase,
+} from "lucide-react";
 import { CONTACT } from "@/data/constants";
 import Field, { inputClass } from "@/components/ui/Field";
 import Button from "@/components/ui/Button";
 import Honeypot from "@/components/ui/Honeypot";
 
 const CATEGORIES = [
-  { value: "general", label: "General Insurance" },
-  { value: "medical", label: "Medical Insurance" },
-  { value: "life", label: "Life Insurance" },
-  { value: "auto", label: "Motor Insurance" },
-  { value: "home", label: "Home Insurance" },
-  { value: "travel", label: "Travel Insurance" },
-  { value: "business", label: "Business Insurance" },
+  { value: "general", label: "General", Icon: ShieldCheck },
+  { value: "medical", label: "Medical", Icon: HeartPulse },
+  { value: "life", label: "Life", Icon: Users },
+  { value: "auto", label: "Motor", Icon: Car },
+  { value: "home", label: "Home", Icon: Home },
+  { value: "travel", label: "Travel", Icon: Plane },
+  { value: "business", label: "Business", Icon: Briefcase },
 ];
 
 const reassurances = [
@@ -178,25 +189,47 @@ const QuoteForm = () => {
                 />
               </Field>
 
-              <Field label="What would you like cover for?" htmlFor="category" required>
-                <select
-                  id="category"
-                  name="category"
-                  required
-                  value={formData.category}
-                  onChange={handleChange}
-                  className={inputClass}
-                >
-                  <option value="" disabled>
-                    Choose a type of insurance
-                  </option>
-                  {CATEGORIES.map((c) => (
-                    <option key={c.value} value={c.value}>
-                      {c.label}
-                    </option>
-                  ))}
-                </select>
-              </Field>
+              <fieldset>
+                <legend className="block text-sm font-medium text-gray-700">
+                  What would you like cover for?{" "}
+                  <span className="text-brand-orange">*</span>
+                </legend>
+                <div className="mt-2 grid grid-cols-3 gap-2.5 sm:grid-cols-4">
+                  {CATEGORIES.map(({ value, label, Icon }) => {
+                    const active = formData.category === value;
+                    return (
+                      <label
+                        key={value}
+                        className={`flex cursor-pointer flex-col items-center gap-2 rounded-xl border px-2 py-3 text-center text-sm font-medium shadow-sm transition ${
+                          active
+                            ? "border-brand-orange bg-brand-orange-muted text-brand-orange-dark ring-2 ring-brand-orange"
+                            : "border-gray-200 bg-white text-gray-700 hover:border-brand-orange/60 hover:bg-brand-orange-tint"
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name="category"
+                          value={value}
+                          checked={active}
+                          onChange={handleChange}
+                          required
+                          className="sr-only"
+                        />
+                        <span
+                          className={`grid h-10 w-10 place-items-center rounded-full transition ${
+                            active
+                              ? "bg-brand-orange text-white"
+                              : "bg-brand-orange-muted text-brand-orange"
+                          }`}
+                        >
+                          <Icon size={20} aria-hidden="true" />
+                        </span>
+                        {label}
+                      </label>
+                    );
+                  })}
+                </div>
+              </fieldset>
 
               <div className="flex items-start gap-2">
                 <input

@@ -39,9 +39,10 @@ const About = () => {
             Cover that fits, advice you can trust
           </h2>
           <p className="mt-4 text-base sm:text-lg leading-relaxed">
-            Datani is an independent insurance agency serving clients countrywide. We compare cover from Kenya&apos;s
-            leading insurers and explain your options in plain language — so you get the right
-            protection at the right price, from people who actually pick up the phone.
+            At Datani Insurance, we believe insurance is more than just cover — it&apos;s
+            about being there when it counts. We offer{" "}
+            <span className="font-semibold text-black">service that shields</span>: expert
+            advice, reliable protection, and personal support.
           </p>
         </div>
 
