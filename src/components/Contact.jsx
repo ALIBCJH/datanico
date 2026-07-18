@@ -182,7 +182,7 @@ const Contact = () => {
                   name="message"
                   required
                   rows="4"
-                  placeholder="Tell us what you need — a quote, a claim, or a question."
+                  placeholder="Request a quote, file a claim, or ask a question."
                   value={formData.message}
                   onChange={handleChange}
                   className={inputClass}

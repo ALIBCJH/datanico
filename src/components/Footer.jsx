@@ -4,14 +4,14 @@ import { CONTACT } from "@/data/constants";
 const year = new Date().getFullYear();
 
 const products = [
-  "Motor Insurance",
-  "Medical Insurance",
-  "Property Insurance",
-  "Marine & Goods in Transit",
-  "Liability Insurance",
-  "Life Assurance",
-  "Retirement & Pension Plan",
-  "Investment Plans",
+  { label: "Motor Insurance", href: "/insurance/motor" },
+  { label: "Medical Insurance", href: "/insurance/medical" },
+  { label: "Property Insurance", href: "/insurance/property" },
+  { label: "Marine & Goods in Transit", href: "/insurance/marine" },
+  { label: "Liability Insurance", href: "/insurance/liability" },
+  { label: "Life Assurance", href: "/insurance/life" },
+  { label: "Retirement & Pension Plan", href: "/insurance/pension" },
+  { label: "Investment Plans", href: "/insurance/investment" },
 ];
 
 const quickLinks = [
@@ -40,7 +40,11 @@ const Footer = () => {
             <h3 className="font-bold text-brand-orange mb-4">Products</h3>
             <ul className="space-y-2">
               {products.map((p) => (
-                <li key={p}>{p}</li>
+                <li key={p.label}>
+                  <Link href={p.href} className="hover:text-brand-orange transition">
+                    {p.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -68,16 +72,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/80">
+        <div className="border-t border-white/20 pt-6 text-sm text-white/80">
           <p>© {year} Datani Insurance Agency. All rights reserved.</p>
-          <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-brand-orange transition">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-brand-orange transition">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
