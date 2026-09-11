@@ -29,8 +29,12 @@ const steps = [
 
 const Claims = () => {
   return (
-    <section id="claims" className="bg-white pt-11 pb-20 px-6 sm:px-10 font-montserrat">
-      <div className="max-w-7xl mx-auto text-center">
+    // Fill the viewport below the navbar (~8.5rem) so the short page doesn't pull the footer up into view.
+    <section
+      id="claims"
+      className="bg-white pt-11 pb-20 px-6 sm:px-10 font-montserrat min-h-[calc(100svh-8.5rem)] flex flex-col justify-center"
+    >
+      <div className="max-w-7xl w-full mx-auto text-center">
         <PageHeader as="h1" title="How Claims Work" className="mb-14" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
