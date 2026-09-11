@@ -5,7 +5,8 @@ import heroMobile from "@/assets/mobileHero.webp";
 
 const Hero = () => {
   return (
-    <section id="home" className="w-full bg-white relative">
+    // Same off-white as the About section below, so the banner meets it without a seam.
+    <section id="home" className="w-full bg-[#FAFAFA] relative">
       {/*
         The hero headline ("Insurance that puts you first") is baked into the
         banner image, so it isn't crawlable. This real <h1> gives search engines
@@ -30,9 +31,6 @@ const Hero = () => {
         priority
         sizes="100vw"
       />
-
-      {/* Soft fade so the banner melts into the page instead of ending on a hard edge. */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-8 sm:h-10 md:h-16 bg-gradient-to-b from-transparent to-white z-10" />
 
       <div className="absolute top-[85%] sm:top-[80%] left-1/2 -translate-x-1/2 sm:left-[80px] sm:translate-x-0 lg:left-[240px] z-20">
         <Link href="/quote">
